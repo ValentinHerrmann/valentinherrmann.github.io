@@ -13,6 +13,6 @@
 
 <ul style="margin:0 0 5px;">
   <li><a href="https://github.com/ValentinHerrmann/sql_testing_tools"><autocolor><u>SQL Testing Tools</u></autocolor></a>: A framework to test simple SQL queries of K-12 students. Available at <a href="https://pypi.org/project/sql-testing-tools/"><autocolor><u>pypi</u></autocolor></a></li>
-  <li><a href="https://github.com/ValentinHerrmann/dbiu_databases"><autocolor><u>DBIU Databses</u></autocolor></a>: SQLite version of the databases from <a href="https://dbiu.de/"><autocolor><u>dbiu.de</u></autocolor></a> to use with SQL Testing Tools.  Available at <a href="https://pypi.org/project/dbiu-databases/"><autocolor><u>pypi</u></autocolor></a>.</li>
+  <li><a href="https://github.com/ValentinHerrmann/dbiu_databases"><autocolor><u>DBIU Databses</u></autocolor></a>: SQLite version of the databases from <a href="https://www.dbiu.de/"><autocolor><u>dbiu.de</u></autocolor></a> to use with SQL Testing Tools.  Available at <a href="https://pypi.org/project/dbiu-databases/"><autocolor><u>pypi</u></autocolor></a>.</li>
   <li>Issues for these projects can be submitted in the respective Github repositories.</li>
 </ul>
