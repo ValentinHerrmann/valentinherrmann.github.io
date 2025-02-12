@@ -2,7 +2,7 @@
 title: Valentin Herrmann
 position: 
 affiliation: TUM
-email: mail (at) valentin-herrmann.com | valentin.herrmann (at) tum.de
+email: mail (at) valentin-herrmann.com / valentin.herrmann (at) tum.de
 
 # Search Engine Optimization (SEO)
 # The following information is used to improve the website traffic from search engines, e.g., Google.
@@ -13,7 +13,7 @@ canonical: https://minimal-light-theme.yliu.me/
 # Links 
 # If you don't need one of them, you may delete the corresponding line.
 #google_scholar: https://scholar.google.com/
-cv_link: assets/files/cv.pdf
+cv_link: https://github.com/ValentinHerrmann/valentinherrmann.github.io/blob/main/assets/files/CV.pdf
 github_link: https://github.com/ValentinHerrmann
 linkedin: https://www.linkedin.com/in/valentin-herrmann-0017271a9/
 #instagram: https://twitter.com/
