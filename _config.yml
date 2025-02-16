@@ -2,11 +2,11 @@
 title: Valentin Herrmann
 position: 
 affiliation: TUM
-email: mail (at) valentin-herrmann.com  valentin.herrmann (at) tum.de
+email: mail[at]valentin-herrmann.com      valentin.herrmann[at]tum.de
 
 # Search Engine Optimization (SEO)
 # The following information is used to improve the website traffic from search engines, e.g., Google.
-keywords: minimal light
+keywords: Valentin Herrmann, TUM, Technical University of Munich, Research, Projects, CV, Curriculum Vitae, Resume, Personal Homepage, Education, CS, CS Education, EdTech, Munich, Artemis, TU München, SOT
 description: The Minimal Light is a simple and elegant jekyll theme for academic personal homepage.
 canonical: https://minimal-light-theme.yliu.me/
 
@@ -16,7 +16,6 @@ canonical: https://minimal-light-theme.yliu.me/
 cv_link: https://github.com/ValentinHerrmann/valentinherrmann.github.io/blob/main/assets/files/CV.pdf
 github_link: https://github.com/ValentinHerrmann
 linkedin: https://www.linkedin.com/in/valentin-herrmann-0017271a9/
-#instagram: https://twitter.com/
 
 # Images (e.g., your profile picture and your website's favicon) 
 # "favicon" and "favicon_dark" are used for the light and dark modes, respectively. 
