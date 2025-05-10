@@ -57,15 +57,15 @@ classes:
 
 
 
-<h2 class="portfolio__title"><a href="/lessonsscripts/">{{ site.data.ui-text[site.locale].portfolio | default: "Unterrichtsskripte Informatik (deutsch)" }}</a></h2>
+<h2 class="portfolio__title"><a href="/lessonscripts/">{{ site.data.ui-text[site.locale].portfolio | default: "Unterrichtsskripte Informatik (deutsch)" }}</a></h2>
 
 
 
-{% assign portfolio_items = site.lessonsscripts | default: site.collections['lessonsscripts'].docs %}
+{% assign portfolio_items = site.lessonscripts | default: site.collections['lessonscripts'].docs %}
 
 <div class="portfolio-entries" style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem;">
   {% for item in portfolio_items %}
-    <div class="lessonsscripts-item">
+    <div class="lessonscripts-item">
       <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
         {% if item.header.teaser %}
           <div class="archive__item-teaser">
