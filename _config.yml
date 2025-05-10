@@ -272,7 +272,10 @@ collections:
     permalink: /:collection/:path/
   finished:
     output: true
-    permalink: /finished/:path/
+    permalink: /:collection/:path/
+  lessonscripts:
+    output: true
+    permalink: /:collection/:path/
 
 
 # Plugins (previously gems:)
@@ -352,6 +355,13 @@ defaults:
   - scope:
       path: ""
       type: finished
+    values:
+      layout: splash
+      author_profile: false
+      share: true
+  - scope:
+      path: ""
+      type: lessonscripts
     values:
       layout: splash
       author_profile: false
