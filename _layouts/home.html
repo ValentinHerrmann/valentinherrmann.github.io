@@ -1,20 +1,56 @@
 ---
-layout: archive
+layout: single
+classes:
+  - landing
+  - dark-theme
+  - wide
 ---
 
 {{ content }}
 
-<h3 class="archive__subtitle">{{ site.data.ui-text[site.locale].recent_posts | default: "Recent Posts" }}</h3>
+<h2 class="portfolio__title">{{ site.data.ui-text[site.locale].portfolio | default: "Current Projects" }}</h2>
 
-{% if paginator %}
-  {% assign posts = paginator.posts %}
-{% else %}
-  {% assign posts = site.posts %}
-{% endif %}
+{% assign portfolio_items = site.portfolio | default: site.collections['portfolio'].docs %}
 
-{% assign entries_layout = page.entries_layout | default: 'list' %}
-<div class="entries-{{ entries_layout }}">
-  {% include documents-collection.html entries=posts type=entries_layout %}
+<div class="portfolio-entries" style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem;">
+  {% for item in portfolio_items %}
+    <div class="portfolio-item">
+      <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+        {% if item.header.teaser %}
+          <div class="archive__item-teaser">
+            <img src="{{ item.header.teaser | relative_url }}" alt="">
+          </div>
+        {% endif %}
+        <h3 class="archive__item-title">
+          <a href="{{ item.url }}">{{ item.title }}</a>
+        </h3>
+        <p class="archive__item-excerpt">{{ item.excerpt | strip_html | truncate: 150 }}</p>
+      </article>
+    </div>
+  {% endfor %}
+</div>
+
+
+<h2 class="portfolio__title">{{ site.data.ui-text[site.locale].portfolio | default: "Finished Projects" }}</h2>
+
+{% assign portfolio_items = site.finished | default: site.collections['finished'].docs %}
+
+<div class="portfolio-entries" style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem;">
+  {% for item in portfolio_items %}
+    <div class="portfolio-item">
+      <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+        {% if item.header.teaser %}
+          <div class="archive__item-teaser">
+            <img src="{{ item.header.teaser | relative_url }}" alt="">
+          </div>
+        {% endif %}
+        <h3 class="archive__item-title">
+          <a href="{{ item.url }}">{{ item.title }}</a>
+        </h3>
+        <p class="archive__item-excerpt">{{ item.excerpt | strip_html | truncate: 150 }}</p>
+      </article>
+    </div>
+  {% endfor %}
 </div>
 
 {% include paginator.html %}
