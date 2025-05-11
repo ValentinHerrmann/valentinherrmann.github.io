@@ -1,8 +1,8 @@
 ---
 title: Unterrichts-Skripte Informatik (deutsch)
 layout: collection
-permalink: /lessonscripts/
-collection: lessonscripts
+permalink: /coll_lessonscripts/
+collection: coll_lessonscripts
 entries_layout: grid
 classes: wide
 ---

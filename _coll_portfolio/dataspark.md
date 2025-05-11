@@ -2,8 +2,8 @@
 title: "DataSpark"
 excerpt: "(not available yet; very early alpha) A simple SQLite online software aiming to provide a framework for database projects in K-12."
 header:
-  image: /assets/img/dataspark.png
-  teaser: /assets/img/dataspark.png
+  image: /assets/img/dataspark_grey.png
+  teaser: /assets/img/dataspark_grey.png
 sidebar:
   - title: "Role"
     image: http://placehold.it/350x250

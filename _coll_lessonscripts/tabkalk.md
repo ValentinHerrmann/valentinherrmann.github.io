@@ -1,6 +1,6 @@
 ---
 title: "Inf 09: Tabellenkalkulation"
-excerpt: "Komplett-Skript mit Lückentext-Hefteinträgen und Aufgaben, ausgerichtet auf BYCS-Drive."
+excerpt: "Komplett-Skript für den bayerischen G9-Lehrplan mit Lückentext-Hefteinträgen und Aufgaben, ausgerichtet auf BYCS-Drive."
 header:
   image: /assets/img/laptop_wide.png
   teaser: /assets/img/laptop.png

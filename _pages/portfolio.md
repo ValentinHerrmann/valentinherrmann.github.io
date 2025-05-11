@@ -1,8 +1,8 @@
 ---
-title: Portfolio
+title: Current projects
 layout: collection
-permalink: /portfolio/
-collection: portfolio
+permalink: /coll_portfolio/
+collection: coll_portfolio
 entries_layout: grid
 classes: wide
 ---

@@ -23,11 +23,11 @@ title_separator          : "-"
 subtitle                 : # site tagline that appears below site title in masthead
 name                     : "Valentin Herrmann"
 description              : "An amazing website."
-url                      : "valentin-herrmann.com" # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
+url                      : "https://valentin-herrmann.com" # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl                  : # the subpath of your site, e.g. "/blog"
 repository               : "ValentinHerrmann/Valentinherrmann.github.io" # GitHub username/repo-name e.g. "mmistakes/minimal-mistakes"
 teaser                   : # path of fallback teaser image, e.g. "/assets/images/500x300.png"
-logo                     : # "/assets/img/me.jpg" # path of logo image to display in the masthead, e.g. "/assets/images/88x88.png"
+logo                     :  "/assets/img/avatar.png" # path of logo image to display in the masthead, e.g. "/assets/images/88x88.png"
 masthead_title           : "Valentin Herrmann" # overrides the website title displayed in the masthead, use " " for no title
 breadcrumbs              : # true, false (default)
 words_per_minute         : 200
@@ -267,13 +267,13 @@ pagination:
     after: 2
 
 collections:
-  portfolio:
+  coll_portfolio:
     output: true
     permalink: /:collection/:path/
-  finished:
+  coll_finished:
     output: true
     permalink: /:collection/:path/
-  lessonscripts:
+  coll_lessonscripts:
     output: true
     permalink: /:collection/:path/
 
@@ -347,21 +347,21 @@ defaults:
       related: true
   - scope:
       path: ""
-      type: portfolio
+      type: coll_portfolio
     values:
       layout: splash
       author_profile: false
       share: true
   - scope:
       path: ""
-      type: finished
+      type: coll_finished
     values:
       layout: splash
       author_profile: false
       share: true
   - scope:
       path: ""
-      type: lessonscripts
+      type: coll_lessonscripts
     values:
       layout: splash
       author_profile: false
