@@ -118,7 +118,7 @@ author:
   avatar           : "/assets/img/me.jpg" # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
   bio              : "A self-taught developer who became a teacher and develops ed-tech software."
   location         : "Technical University of Munich"
-  email            : "mailto:valentin.herrmann@tum.de"
+  email            : "valentin.herrmann@tum.de"
   links:
     - label: "Email"
       icon: "fas fa-fw fa-envelope-square"
