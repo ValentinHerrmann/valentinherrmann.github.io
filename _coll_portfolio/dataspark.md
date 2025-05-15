@@ -23,4 +23,4 @@ gallery:
     alt: "placeholder image 3"
 ---
 
-Alpha available at https://db.valentin-herrmann.com
+Alpha available at [db.valentin-herrmann.com](https://db.valentin-herrmann.com)
