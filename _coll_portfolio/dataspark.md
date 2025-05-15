@@ -23,4 +23,4 @@ gallery:
     alt: "placeholder image 3"
 ---
 
-// TODO
+Alpha available at https://db.valentin-herrmann.com
