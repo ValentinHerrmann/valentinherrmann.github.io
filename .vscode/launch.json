@@ -1,0 +1,36 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Launch Jekyll Website",
+            "type": "node",
+            "request": "launch",
+            "runtimeExecutable": "bundle",
+            "runtimeArgs": [
+                "exec",
+                "jekyll",
+                "serve",
+                "--host",
+                "127.0.0.1",
+                "--port",
+                "4000"
+            ],
+            "cwd": "${workspaceFolder}",
+            "console": "integratedTerminal",
+            "preLaunchTask": "Kill Jekyll Server",
+            "serverReadyAction": {
+                "pattern": "Server address: https?://127\\.0\\.0\\.1:4000",
+                "uriFormat": "http://localhost:4000",
+                "action": "openExternally"
+            },
+            "presentation": {
+                "hidden": false,
+                "group": "Jekyll",
+                "order": 1
+            },
+            "env": {
+                "BUNDLE_GEMFILE": "${workspaceFolder}/Gemfile"
+            }
+        }
+    ]
+}
