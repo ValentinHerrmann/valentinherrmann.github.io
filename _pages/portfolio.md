@@ -1,7 +1,7 @@
 ---
 title: Current projects
 layout: collection
-permalink: /coll_portfolio/
+permalink: /current_projects/
 collection: coll_portfolio
 entries_layout: grid
 classes: wide

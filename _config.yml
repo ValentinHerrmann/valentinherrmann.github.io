@@ -269,13 +269,13 @@ pagination:
 collections:
   coll_portfolio:
     output: true
-    permalink: /:collection/:path/
+    permalink: /:path/
   coll_finished:
     output: true
-    permalink: /:collection/:path/
+    permalink: /:path/
   coll_lessonscripts:
     output: true
-    permalink: /:collection/:path/
+    permalink: /:path/
 
 
 # Plugins (previously gems:)

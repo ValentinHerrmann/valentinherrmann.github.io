@@ -8,7 +8,7 @@ classes:
 
 {{ content }}
 
-<h2 class="portfolio__title"><a href="/coll_portfolio/">{{ site.data.ui-text[site.locale].coll_portfolio | default: "Current Projects" }}</a></h2>
+<h2 class="portfolio__title"><a href="/current_projects/">{{ site.data.ui-text[site.locale].coll_portfolio | default: "Current Projects" }}</a></h2>
 
 {% assign portfolio_items = site.coll_portfolio | default: site.collections['coll_portfolio'].docs %}
 
@@ -31,7 +31,7 @@ classes:
 </div>
 
 
-<h2 class="portfolio__title"><a href="/coll_finished/">{{ site.data.ui-text[site.locale].portfolio | default: "Finished Projects" }}</a></h2>
+<h2 class="portfolio__title"><a href="/finished_projects/">{{ site.data.ui-text[site.locale].portfolio | default: "Finished Projects" }}</a></h2>
 
 
 
@@ -57,7 +57,7 @@ classes:
 
 
 
-<h2 class="portfolio__title"><a href="/coll_lessonscripts/">{{ site.data.ui-text[site.locale].portfolio | default: "Unterrichtsskripte Informatik (deutsch)" }}</a></h2>
+<h2 class="portfolio__title"><a href="/lesson_script/">{{ site.data.ui-text[site.locale].portfolio | default: "Unterrichtsskripte Informatik (deutsch)" }}</a></h2>
 
 
 
