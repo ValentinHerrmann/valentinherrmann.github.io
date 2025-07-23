@@ -8,9 +8,9 @@ classes:
 
 {{ content }}
 
-<h2 class="portfolio__title">{{ site.data.ui-text[site.locale].portfolio | default: "Current Projects" }}</h2>
+<h2 class="portfolio__title"><a href="/current_projects/">{{ site.data.ui-text[site.locale].coll_portfolio | default: "Current Projects" }}</a></h2>
 
-{% assign portfolio_items = site.portfolio | default: site.collections['portfolio'].docs %}
+{% assign portfolio_items = site.coll_portfolio | default: site.collections['coll_portfolio'].docs %}
 
 <div class="portfolio-entries" style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem;">
   {% for item in portfolio_items %}
@@ -18,12 +18,12 @@ classes:
       <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
         {% if item.header.teaser %}
           <div class="archive__item-teaser">
-            <img src="{{ item.header.teaser | relative_url }}" alt="">
+            <a href="{{ item.url }}"><img src="{{ item.header.teaser | relative_url }}" alt=""></a>
           </div>
         {% endif %}
-        <h3 class="archive__item-title">
+        <h4 class="archive__item-title">
           <a href="{{ item.url }}">{{ item.title }}</a>
-        </h3>
+        </h4>
         <p class="archive__item-excerpt">{{ item.excerpt | strip_html | truncate: 150 }}</p>
       </article>
     </div>
@@ -31,9 +31,11 @@ classes:
 </div>
 
 
-<h2 class="portfolio__title">{{ site.data.ui-text[site.locale].portfolio | default: "Finished Projects" }}</h2>
+<h2 class="portfolio__title"><a href="/finished_projects/">{{ site.data.ui-text[site.locale].portfolio | default: "Finished Projects" }}</a></h2>
 
-{% assign portfolio_items = site.finished | default: site.collections['finished'].docs %}
+
+
+{% assign portfolio_items = site.coll_finished | default: site.collections['coll_finished'].docs %}
 
 <div class="portfolio-entries" style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem;">
   {% for item in portfolio_items %}
@@ -41,12 +43,38 @@ classes:
       <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
         {% if item.header.teaser %}
           <div class="archive__item-teaser">
-            <img src="{{ item.header.teaser | relative_url }}" alt="">
+            <a href="{{ item.url }}"><img src="{{ item.header.teaser | relative_url }}" alt=""></a>
           </div>
         {% endif %}
-        <h3 class="archive__item-title">
+        <h4 class="archive__item-title">
           <a href="{{ item.url }}">{{ item.title }}</a>
-        </h3>
+        </h4>
+        <p class="archive__item-excerpt">{{ item.excerpt | strip_html | truncate: 150 }}</p>
+      </article>
+    </div>
+  {% endfor %}
+</div>
+
+
+
+<h2 class="portfolio__title"><a href="/lesson_script/">{{ site.data.ui-text[site.locale].portfolio | default: "Unterrichtsskripte Informatik (deutsch)" }}</a></h2>
+
+
+
+{% assign portfolio_items = site.coll_lessonscripts | default: site.collections['coll_lessonscripts'].docs %}
+
+<div class="portfolio-entries" style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem;">
+  {% for item in portfolio_items %}
+    <div class="portfolio-item">
+      <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+        {% if item.header.teaser %}
+          <div class="archive__item-teaser">
+            <a href="{{ item.url }}"><img src="{{ item.header.teaser | relative_url }}" alt=""></a>
+          </div>
+        {% endif %}
+        <h4 class="archive__item-title">
+          <a href="{{ item.url }}">{{ item.title }}</a>
+        </h4>
         <p class="archive__item-excerpt">{{ item.excerpt | strip_html | truncate: 150 }}</p>
       </article>
     </div>

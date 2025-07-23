@@ -1,8 +1,8 @@
 ---
 title: Finished
 layout: collection
-permalink: /finished/
-collection: finished
+permalink: /finished_projects/
+collection: coll_finished
 entries_layout: grid
 classes: wide
 ---
