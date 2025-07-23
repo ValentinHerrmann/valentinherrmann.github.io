@@ -2,8 +2,8 @@
 title: "Inf 09: Tabellenkalkulation"
 excerpt: "Komplett-Skript für den bayerischen G9-Lehrplan mit Lückentext-Hefteinträgen und Aufgaben, ausgerichtet auf BYCS-Drive."
 header:
-  image: /assets/img/laptop_wide.png
-  teaser: /assets/img/laptop.png
+  #image: banner.png
+  teaser: overview.png
 sidebar:
   - title: "Role"
     image: http://placehold.it/350x250
@@ -24,7 +24,7 @@ gallery:
 ---
 
 
-<iframe src="../../assets/pdf/Inf09_SkriptTabellenkalkulation.pdf" width="100%" height="600px">
+<iframe src="../../assets/pdf/Inf09_SkriptTabellenkalkulation.pdf" width="100%" height="500px">
   This browser does not support PDFs. Please download the PDF to view it: 
   <a href="../../assets/pdf/Inf09_SkriptTabellenkalkulation.pdf">Download PDF</a>.
 </iframe>

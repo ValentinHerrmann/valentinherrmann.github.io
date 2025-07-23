@@ -2,8 +2,8 @@
 title: "SQL Testing libraries"
 excerpt: "Libraries for testing K-12 SQL-queries with e.g. Artemis"
 header:
-  image: /assets/img/laptop_wide.png
-  teaser: /assets/img/laptop.png
+  image: sql_testing/banner.png
+  teaser: sql_testing/overview.png
 sidebar:
   - title: "Role"
     image: http://placehold.it/350x250

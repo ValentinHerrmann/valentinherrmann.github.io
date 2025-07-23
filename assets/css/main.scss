@@ -7,3 +7,30 @@ search: false
 
 @import "minimal-mistakes/skins/{{ site.minimal_mistakes_skin | default: 'default' }}"; // skin
 @import "minimal-mistakes"; // main partials
+
+/* Hide header on landing page (home layout) */
+.layout--home .masthead {
+  display: none;
+}
+
+/* Custom styles to reduce top bar height on collection pages */
+.masthead {
+  &__inner-wrap {
+    padding: 0.25em 1em; // Further reduced from 0.5em
+    font-size: 0.85em; // Reduced font size for more compact header
+  }
+}
+
+.page__hero {
+  margin-bottom: 0.5em; // Further reduced from 1em
+  
+  &--overlay {
+    margin-bottom: 0.5em; // Further reduced from 1em
+    padding: 1em 0; // Further reduced from 1.5em 0
+  }
+}
+
+/* Reduce spacing for archive/collection pages */
+.archive {
+  margin-top: 0.25em; // Further reduced from 0.5em
+}
