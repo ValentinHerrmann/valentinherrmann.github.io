@@ -14,7 +14,7 @@
   &__inner-wrap {
     @include clearfix;
     margin-inline: auto;
-    padding: 1em;
+    padding: 0.25em 1em; // Reduced from 1em to 0.25em for top/bottom
     max-width: 100%;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -23,6 +23,7 @@
     -ms-flex-pack: justify;
     justify-content: space-between;
     font-family: $sans-serif-narrow;
+    font-size: 0.85em; // Reduced font size
 
     @include breakpoint($x-large) {
       max-width: $max-width;
@@ -39,7 +40,7 @@
 }
 
 .site-logo img {
-  max-height: 2rem;
+  max-height: 1.5rem; // Reduced from 2rem
 }
 
 .site-title {
@@ -76,6 +77,7 @@
     padding: 0;
     clear: both;
     list-style-type: none;
+    line-height: 1.2; // Reduced line height for tighter spacing
   }
 }
 

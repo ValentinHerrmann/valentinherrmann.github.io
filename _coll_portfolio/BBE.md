@@ -2,8 +2,8 @@
 title: "BlueJ Blockly Extension"
 excerpt: "A BlueJ extension for translating blocks to java including a library for simple game development."
 header:
-  image: /assets/img/BBE_overview.png
-  teaser: /assets/img/BBE_overview.png
+  image: BBE/BBE_overview.png
+  teaser: BBE/BBE_overview.png
 sidebar:
   - title: "Role"
     image: http://placehold.it/350x250

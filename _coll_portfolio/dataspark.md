@@ -2,8 +2,8 @@
 title: "DataSpark"
 excerpt: "(not available yet; very early alpha) A simple SQLite online software aiming to provide a framework for database projects in K-12."
 header:
-  image: /assets/img/dataspark_grey.png
-  teaser: /assets/img/dataspark_grey.png
+  image: dataspark/banner.png
+  teaser:  dataspark/overview.png
 sidebar:
   - title: "Role"
     image: http://placehold.it/350x250
@@ -27,3 +27,5 @@ Alpha available at [db.valentin-herrmann.com](https://db.valentin-herrmann.com)
 
 Code at
 [github.com/ValentinHerrmann/DataSpark](https://github.com/ValentinHerrmann/DataSpark)
+
+
