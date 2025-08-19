@@ -8,7 +8,7 @@ header:
 
 ## General
 
-**Beta Hosted at** [db.valentin-herrmann.com](https://db.valentin-herrmann.com) (Login required, email me for evaluation)
+**Beta Hosted at** [db.valentin-herrmann.com](https://db.valentin-herrmann.com) (Login required)
 
 **Code at Github:**
 [DataSpark](https://github.com/ValentinHerrmann/DataSpark) and Forks of
