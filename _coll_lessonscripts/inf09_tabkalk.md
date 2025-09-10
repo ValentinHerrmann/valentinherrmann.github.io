@@ -76,20 +76,19 @@ Präsentation immer in Acrobat oder Foxit Reader im Präsentationsmodus (Vollbil
 
 ![alt text](/inf09_tabkalk/presentation_toc.png)
 
-![alt text](/inf09_tabkalk/qrcode.png)
+![alt text](/inf09_tabkalk/aufgabe_skript.png)
 
 ![alt text](/inf09_tabkalk/summaryzoom.png)
 
 ![alt text](/inf09_tabkalk/hefteintrag.png)
 
-![alt text](/inf09_tabkalk/he_skript.png)
+![alt text](/inf09_tabkalk/hefteintrag.gif)
+
+![alt text](/inf09_tabkalk/aufgabe.gif)
 
 ![alt text](/inf09_tabkalk/aufgabe.png)
 
-![alt text](/inf09_tabkalk/aufgabe_skript.png)
-
 ![alt text](/inf09_tabkalk/attachments_skript.png)
-
 ![alt text](/inf09_tabkalk/attach_pres.png)
 
 ![alt text](/inf09_tabkalk/aufraeumen.gif)
