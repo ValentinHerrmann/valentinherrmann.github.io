@@ -56,6 +56,8 @@ Das Skript besteht aus einem DIN A4 Teil für die Lernenden zum Ausdrucken und e
 </iframe>
 </details>
 
+### WICHTIG
+Präsentation immer in Acrobat oder Foxit Reader im Präsentationsmodus (Vollbild) starten, da sonst die Animationen, eingebetteten Dateien und Links nicht funktionieren.
 
 ### Technische Features
 - Farbliche Kodierung für Hefteinträge und Aufgaben.
@@ -69,8 +71,6 @@ Das Skript besteht aus einem DIN A4 Teil für die Lernenden zum Ausdrucken und e
 - Alle Versionen sind PDF Dateien, die auf jedem Gerät und Betriebssystem funktionieren. Manche Features erzeugen dafür zusätzlich PDF-Seiten, die Präsentationsdateien sind daher manchmal etwas umfangreicher. 
 
 
-### Wichtig
-Präsentation immer in Acrobat oder Foxit Reader im Präsentationsmodus (Vollbild) starten, da sonst die Animationen, eingebetteten Dateien und Links nicht funktionieren.
 
 ### Impressionen
 
