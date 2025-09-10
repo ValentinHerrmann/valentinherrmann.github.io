@@ -63,11 +63,11 @@ Präsentation immer in Acrobat oder Foxit Reader im Präsentationsmodus (Vollbil
 - Farbliche Kodierung für Hefteinträge und Aufgaben.
 - In der Präsentation in ihrer Reihenfolge nacheinander auftauchende Lösungen für Lücken und Aufgaben.
 - Arbeitszeit Timer für Aufgaben (nur Adobe Acrobat und Foxit Readers) zeigt verbleibende Zeit in Minutenschritten an. Timer startet nachdem auf der Folie 1x weiter geklickt wurde (Leiste am unteren Rand ändert ihre Farbe).
-- Ins PDF eingebettete Vorlage- und Lösungsdateien (z.B. Excel, PDF, ...)
+- Ins PDF eingebettete Vorlage- und Lösungsdateien (z.B. Excel, PDF, ...) zum Öffnen per Doppelklick auch während der Präsentation.
 - "Bitte Aufräumen" Abschlussfolie mit Animation und diskretem Link zu ihr auf jeder Seite
 - Übersichtfolie am Anfang jeder Doppelstunde mit Hyperlink-Thumbnails der Folien der Vor- und aktuellen Stunde (ähnlich PPT Summary Zoom)
 - QR Codes zu Hyperlinks (nur im Skript)
-- Gesamt-Inhaltsverzeichnis mit Hyperlinks vor jeder Doppelstunde für schnelle Navigation
+- Gesamt-Inhaltsverzeichnis mit Hyperlinks vor jeder Doppelstunde für schnelle Navigation und automatische Doppelstunden Erkennung durch Artemis.
 - Alle Versionen sind PDF Dateien, die auf jedem Gerät und Betriebssystem funktionieren. Manche Features erzeugen dafür zusätzlich PDF-Seiten, die Präsentationsdateien sind daher manchmal etwas umfangreicher. 
 
 
