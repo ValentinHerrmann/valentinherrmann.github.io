@@ -56,6 +56,8 @@ Das Skript besteht aus einem DIN A4 Teil für die Lernenden zum Ausdrucken und e
 </iframe>
 </details>
 
+  <a href="/inf09_tabkalk/Inf09_TabKalk_Lualatex.zip">Latex Source Code</a>.
+
 ### WICHTIG
 Präsentation immer in Acrobat oder Foxit Reader im Präsentationsmodus (Vollbild) starten, da sonst die Animationen, eingebetteten Dateien und Links nicht funktionieren.
 
