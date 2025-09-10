@@ -62,7 +62,7 @@ Präsentation immer in Acrobat oder Foxit Reader im Präsentationsmodus (Vollbil
 ### Technische Features
 - Farbliche Kodierung für Hefteinträge und Aufgaben.
 - In der Präsentation in ihrer Reihenfolge nacheinander auftauchende Lösungen für Lücken und Aufgaben.
-- Arbeitszeit Timer für Aufgaben (nur Adobe Acrobat und Foxit Readers) zeigt verbleibende Zeit in Minutenschritten an.
+- Arbeitszeit Timer für Aufgaben (nur Adobe Acrobat und Foxit Readers) zeigt verbleibende Zeit in Minutenschritten an. Timer startet nachdem auf der Folie 1x weiter geklickt wurde (Leiste am unteren Rand ändert ihre Farbe).
 - Ins PDF eingebettete Vorlage- und Lösungsdateien (z.B. Excel, PDF, ...)
 - "Bitte Aufräumen" Abschlussfolie mit Animation und diskretem Link zu ihr auf jeder Seite
 - Übersichtfolie am Anfang jeder Doppelstunde mit Hyperlink-Thumbnails der Folien der Vor- und aktuellen Stunde (ähnlich PPT Summary Zoom)
