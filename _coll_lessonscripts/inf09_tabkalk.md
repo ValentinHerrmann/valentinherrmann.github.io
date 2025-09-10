@@ -18,6 +18,8 @@ sidebar:
 
 Das Skript für das Fach Informatik in der 9. Jahrgangsstufe am Gymnasium (G9) in Bayern deckt das [Lehrplan](https://www.lehrplanplus.bayern.de/fachlehrplan/gymnasium/9/informatik)-Thema Tabellenkalkuation komplett ab. Das Skript ist auf die Nutzung der bayerischen Lernplattform BYCS-Drive ausgerichtet, ist jedoch voll kompatibel mit MS Excel oder LibreOffice Calc.
 
+Das Skript besteht aus einem DIN A4 Teil für die Lernenden zum Ausdrucken und einem Präsentations-Teil für die Lehrkraft. Beide Teile sind als PDF-Dateien mit vielen technischen Features umgesetzt.
+
 
 
 
@@ -58,7 +60,7 @@ Das Skript für das Fach Informatik in der 9. Jahrgangsstufe am Gymnasium (G9) i
 ### Technische Features
 - Farbliche Kodierung für Hefteinträge und Aufgaben.
 - In der Präsentation in ihrer Reihenfolge nacheinander auftauchende Lösungen für Lücken und Aufgaben.
-- Arbeitszeit Timer für Aufgaben (nur Adobe Acrobat und Foxit Reader im Präsentationsmodus) zeigt verbleibende Zeit in Minutenschritten an.
+- Arbeitszeit Timer für Aufgaben (nur Adobe Acrobat und Foxit Readers) zeigt verbleibende Zeit in Minutenschritten an.
 - Ins PDF eingebettete Vorlage- und Lösungsdateien (z.B. Excel, PDF, ...)
 - "Bitte Aufräumen" Abschlussfolie mit Animation und diskretem Link zu ihr auf jeder Seite
 - Übersichtfolie am Anfang jeder Doppelstunde mit Hyperlink-Thumbnails der Folien der Vor- und aktuellen Stunde (ähnlich PPT Summary Zoom)
@@ -68,7 +70,7 @@ Das Skript für das Fach Informatik in der 9. Jahrgangsstufe am Gymnasium (G9) i
 
 
 ### Wichtig
-Präsentation immer in Acrobat oder Foxit Read im Präsentationsmodus (Vollbild) starten, da sonst die Animationen, eingebetteten Dateien und Links nicht funktionieren.
+Präsentation immer in Acrobat oder Foxit Reader im Präsentationsmodus (Vollbild) starten, da sonst die Animationen, eingebetteten Dateien und Links nicht funktionieren.
 
 ### Impressionen
 
@@ -77,6 +79,14 @@ Präsentation immer in Acrobat oder Foxit Read im Präsentationsmodus (Vollbild)
 ![alt text](/inf09_tabkalk/qrcode.png)
 
 ![alt text](/inf09_tabkalk/summaryzoom.png)
+
+![alt text](/inf09_tabkalk/hefteintrag.png)
+
+![alt text](/inf09_tabkalk/he_skript.png)
+
+![alt text](/inf09_tabkalk/aufgabe.png)
+
+![alt text](/inf09_tabkalk/aufgabe_skript.png)
 
 ![alt text](/inf09_tabkalk/attachments_skript.png)
 
