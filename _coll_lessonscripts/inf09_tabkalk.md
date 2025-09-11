@@ -2,12 +2,10 @@
 title: "Inf 09: Tabellenkalkulation"
 excerpt: "Komplett-Skript für den bayerischen G9-Lehrplan mit Lückentext-Hefteinträgen und Aufgaben, ausgerichtet auf BYCS-Drive."
 header:
-  image: banner.png
-  teaser: overview.png
+  image: /inf09_tabkalk/banner.png
+  teaser: /inf09_tabkalk/overview.png
 ---
 
-
-# Informatik 09: Tabellenkalkulation
 
 Das Skript für das Fach Informatik in der 9. Jahrgangsstufe am Gymnasium (G9) in Bayern deckt das [Lehrplan](https://www.lehrplanplus.bayern.de/fachlehrplan/gymnasium/9/informatik)-Thema Tabellenkalkuation komplett ab. Das Skript ist auf die Nutzung der bayerischen Lernplattform BYCS-Drive ausgerichtet, ist jedoch voll kompatibel mit MS Excel oder LibreOffice Calc.
 
