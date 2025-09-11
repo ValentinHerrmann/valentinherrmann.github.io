@@ -4,13 +4,6 @@ excerpt: "Komplett-Skript für den bayerischen G9-Lehrplan mit Lückentext-Hefte
 header:
   image: banner.png
   teaser: overview.png
-sidebar:
-  - title: "Role"
-    image: http://placehold.it/350x250
-    image_alt: "logo"
-    text: "Designer, Front-End Developer"
-  - title: "Responsibilities"
-    text: "Reuters try PR stupid commenters should isn't a business model"
 ---
 
 
@@ -23,45 +16,136 @@ Das Skript besteht aus einem DIN A4 Teil für die Lernenden zum Ausdrucken und e
 
 
 
+
+
+
 ### PDF Dateien zum Download
+#### Skript zum Ausdrucken bzw. Ausfüllen am Tablet
 <details>
-<summary>Skript für Lernende zum Ausdrucken</summary>
-<iframe src="/inf09_tabkalk/skript_vlg-qr-hints.pdf" width="100%" height="500px">
+<summary>Für Lernende: mit Dateianhängen und QR-Codes</summary>
+<iframe src="/inf09_tabkalk/print_students.pdf" width="100%" height="500px">
   This browser does not support PDFs. Please download the PDF to view it: 
-  <a href="/inf09_tabkalk/skript_vlg-qr-hints.pdf">Download PDF</a>.
+  <a href="/inf09_tabkalk/print_students.pdf">Download PDF</a>.
 </iframe>
 </details>
 
 <details>
-<summary>Skript mit Lösungen</summary>
-<iframe src="/inf09_tabkalk/skript_vlg-qr-hints-lsg.pdf" width="100%" height="500px">
+<summary>Für Lernende: Minimal ohne technische Spezialfeatures</summary>
+<iframe src="/inf09_tabkalk/print_students-minimal.pdf" width="100%" height="500px">
   This browser does not support PDFs. Please download the PDF to view it: 
-  <a href="/inf09_tabkalk/skript_vlg-qr-hints-lsg.pdf">Download PDF</a>.
+  <a href="/inf09_tabkalk/print_students-minimal.pdf">Download PDF</a>.
 </iframe>
 </details>
 
 <details>
-<summary>Präsentation mit Lösungen und Doppelstunden-Einteilung</summary>
-<iframe src="/inf09_tabkalk/presentation_sessions.pdf" width="100%" height="500px">
+<summary>Für Lehrkraft: mit Dateianhängen, QR-Codes und Lösungen</summary>
+<iframe src="/inf09_tabkalk/print_solution.pdf" width="100%" height="500px">
   This browser does not support PDFs. Please download the PDF to view it: 
-  <a href="/inf09_tabkalk/presentation_sessions.pdf">Download PDF</a>.
+  <a href="/inf09_tabkalk/print_solution.pdf">Download PDF</a>.
 </iframe>
 </details>
 
 <details>
-<summary>Präsentation mit Lösungen, Doppelstunden-Einteilung, Aufräum-Folie und Timer</summary>
+<summary>Für Lehrkraft: Mit Lösung, ansonsten minimal ohne technische Spezialfeatures</summary>
+<iframe src="/inf09_tabkalk/print_solution-minimal.pdf" width="100%" height="500px">
+  This browser does not support PDFs. Please download the PDF to view it: 
+  <a href="/inf09_tabkalk/print_solution-minimal.pdf">Download PDF</a>.
+</iframe>
+</details>
+
+
+
+
+
+
+
+#### Präsentation für die Lehrkraft
+
+Präsentation immer in Acrobat oder Foxit Reader im Präsentationsmodus (Vollbild) starten, da sonst die Animationen, eingebetteten Dateien und Links nicht funktionieren.
+
+<details>
+<summary>mit allen Features</summary>
 <iframe src="/inf09_tabkalk/presentation_all.pdf" width="100%" height="500px">
   This browser does not support PDFs. Please download the PDF to view it: 
   <a href="/inf09_tabkalk/presentation_all.pdf">Download PDF</a>.
 </iframe>
 </details>
 
-  <a href="/inf09_tabkalk/Inf09_TabKalk_Lualatex.zip">Latex Source Code</a>.
+<details>
+<summary>ohne Doppelstundeneinteilung</summary>
+<iframe src="/inf09_tabkalk/presentation_nosession.pdf" width="100%" height="500px">
+  This browser does not support PDFs. Please download the PDF to view it: 
+  <a href="/inf09_tabkalk/presentation_nosession.pdf">Download PDF</a>.
+</iframe>
+</details>
 
-### WICHTIG
-Präsentation immer in Acrobat oder Foxit Reader im Präsentationsmodus (Vollbild) starten, da sonst die Animationen, eingebetteten Dateien und Links nicht funktionieren.
+<details>
+<summary>ohne Arbeitszeiten-Timer</summary>
+<iframe src="/inf09_tabkalk/presentation_notimer.pdf" width="100%" height="500px">
+  This browser does not support PDFs. Please download the PDF to view it: 
+  <a href="/inf09_tabkalk/presentation_notimer.pdf">Download PDF</a>.
+</iframe>
+</details>
 
-### Technische Features
+<details>
+<summary>ohne animierte "Bitte aufräumen" Folie</summary>
+<iframe src="/inf09_tabkalk/presentation_noaufraeumen.pdf" width="100%" height="500px">
+  This browser does not support PDFs. Please download the PDF to view it: 
+  <a href="/inf09_tabkalk/presentation_noaufraeumen.pdf">Download PDF</a>.
+</iframe>
+</details>
+
+
+
+<details>
+<summary>minimal = ohne technische Spezialfeatures</summary>
+<iframe src="/inf09_tabkalk/presentation_minimal.pdf" width="100%" height="500px">
+  This browser does not support PDFs. Please download the PDF to view it: 
+  <a href="/inf09_tabkalk/presentation_minimal.pdf">Download PDF</a>.
+</iframe>
+</details>
+
+
+
+<details>
+<summary>minimal, mit Doppelstundeneinteilung</summary>
+<iframe src="/inf09_tabkalk/presentation_minimal-session.pdf" width="100%" height="500px">
+  This browser does not support PDFs. Please download the PDF to view it: 
+  <a href="/inf09_tabkalk/presentation_minimal-session.pdf">Download PDF</a>.
+</iframe>
+</details>
+
+
+
+<details>
+<summary>minimal mit Dateianhängen</summary>
+<iframe src="/inf09_tabkalk/presentation_minimal-attachments.pdf" width="100%" height="500px">
+  This browser does not support PDFs. Please download the PDF to view it: 
+  <a href="/inf09_tabkalk/presentation_minimal-attachments.pdf">Download PDF</a>.
+</iframe>
+</details>
+
+
+
+
+
+
+
+
+
+
+
+
+
+#### Latex Source-Code
+<a href="/inf09_tabkalk/Inf09_TabKalk_Lualatex.zip">Download Latex Source Code</a>.
+
+
+
+
+
+
+### (Technische) Features
 - Farbliche Kodierung für Hefteinträge und Aufgaben.
 - In der Präsentation in ihrer Reihenfolge nacheinander auftauchende Lösungen für Lücken und Aufgaben.
 - Arbeitszeit Timer für Aufgaben (nur Adobe Acrobat und Foxit Readers) zeigt verbleibende Zeit in Minutenschritten an. Timer startet nachdem auf der Folie 1x weiter geklickt wurde (Leiste am unteren Rand ändert ihre Farbe).
