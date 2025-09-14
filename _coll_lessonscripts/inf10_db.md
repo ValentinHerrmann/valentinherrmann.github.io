@@ -157,7 +157,7 @@ Präsentation immer in Acrobat oder Foxit Reader im Präsentationsmodus (Vollbil
 - Alle Versionen sind PDF Dateien, die auf jedem Gerät und Betriebssystem funktionieren. Manche Features erzeugen dafür zusätzlich PDF-Seiten, die Präsentationsdateien sind daher manchmal etwas umfangreicher. 
 
 
-
+<!-- 
 ### Impressionen
 
 ![alt text](/inf10_db/presentation_toc.png)
@@ -177,4 +177,4 @@ Präsentation immer in Acrobat oder Foxit Reader im Präsentationsmodus (Vollbil
 ![alt text](/inf10_db/attachments_skript.png)
 ![alt text](/inf10_db/attach_pres.png)
 
-![alt text](/inf10_db/aufraeumen.gif)
+![alt text](/inf10_db/aufraeumen.gif) -->
