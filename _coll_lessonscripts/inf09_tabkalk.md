@@ -9,7 +9,7 @@ header:
 
 Das Skript für das Fach Informatik in der 9. Jahrgangsstufe am Gymnasium (G9) in Bayern deckt das [Lehrplan](https://www.lehrplanplus.bayern.de/fachlehrplan/gymnasium/9/informatik)-Thema Tabellenkalkuation komplett ab. Das Skript ist auf die Nutzung der bayerischen Lernplattform BYCS-Drive ausgerichtet, ist jedoch voll kompatibel mit MS Excel oder LibreOffice Calc.
 
-Das Skript besteht aus einem DIN A4 Teil für die Lernenden zum Ausdrucken und einem Präsentations-Teil für die Lehrkraft. Beide Teile sind als PDF-Dateien mit vielen technischen Features umgesetzt.
+Das Skript besteht aus einem DIN A4 Teil für die Lernenden zum Ausdrucken und einem Präsentations-Teil für die Lehrkraft. Beide Teile sind als PDF-Dateien mit vielen technischen Features umgesetzt. Die Präsentation hierbei immer in Acrobat, Foxit Reader oder Okular im Präsentationsmodus (Vollbild) starten, da sonst die Animationen, eingebetteten Dateien und Links nicht funktionieren.
 
 
 
@@ -18,25 +18,62 @@ Das Skript besteht aus einem DIN A4 Teil für die Lernenden zum Ausdrucken und e
 
 
 ### PDF Dateien zum Download
-#### Skript zum Ausdrucken bzw. Ausfüllen am Tablet
+
+<script>
+const baseUrl = '/inf09_tabkalk/';
+const variants = ['', '_mtg', '_derksen'];
+const variantNames = ['Standard', 'MTG', 'Derksen'];
+const files = [
+  { label: 'Skript Lernende (alle Features, Coverseite)', name: 'print_students-cover' },
+  { label: 'Skript Lernende (alle Features)', name: 'print_students' },
+  { label: 'Skript Lernende (minimal)', name: 'print_students-minimal' },
+  { label: 'Skript Lehrkraft (Lösung, alle Features, Coverseite)', name: 'print_solution-cover' },
+  { label: 'Skript Lehrkraft (Lösung, alle Features)', name: 'print_solution' },
+  { label: 'Skript Lehrkraft (Lösung, minimal)', name: 'print_solution-minimal' },
+  { label: 'Präsentation (alle Features)', name: 'presentation_all' },
+  { label: 'Präsentation (o. Doppelstd.)', name: 'presentation_nosession' },
+  { label: 'Präsentation (o. Timer)', name: 'presentation_notimer' },
+  { label: 'Präsentation (o. Aufräumen)', name: 'presentation_noaufraeumen' },
+  { label: 'Präsentation (minimal)', name: 'presentation_minimal' },
+  { label: 'Präsentation (min. + Doppelstd.)', name: 'presentation_minimal-session' },
+  { label: 'Präsentation (min. + Anhänge)', name: 'presentation_minimal-attachments' }
+];
+
+document.write('<table>');
+document.write('<thead><tr><th></th>');
+variantNames.forEach(name => document.write('<th>' + name + '</th>'));
+document.write('</tr></thead><tbody>');
+
+files.forEach(file => {
+  document.write('<tr><td><strong>' + file.label + '</strong></td>');
+  variants.forEach((variant, idx) => {
+    const url = baseUrl + file.name + variant + '.pdf';
+    const linkText = idx === 0 ? file.name + '.pdf' : variantNames[idx];
+    document.write('<td><a href="' + url + '">' + linkText + '</a></td>');
+  });
+  document.write('</tr>');
+});
+
+document.write('</tbody></table>');
+</script>
+
+<noscript>
+<em>Bitte aktivieren Sie JavaScript, um die Download-Tabelle anzuzeigen.</em>
+</noscript>
+
+
+### Beispiel-PDFs
+
 <details>
-<summary>Für Lernende: mit Dateianhängen und QR-Codes</summary>
+<summary>Für Lernende: Skript mit Dateianhängen, QR-Codes und Coverseite</summary>
 <iframe src="/inf09_tabkalk/print_students.pdf" width="100%" height="500px">
   This browser does not support PDFs. Please download the PDF to view it: 
-  <a href="/inf09_tabkalk/print_students.pdf">Download PDF</a>.
+  <a href="/inf09_tabkalk/print_students-cover.pdf">Download PDF</a>.
 </iframe>
 </details>
 
 <details>
-<summary>Für Lernende: Minimal ohne technische Spezialfeatures</summary>
-<iframe src="/inf09_tabkalk/print_students-minimal.pdf" width="100%" height="500px">
-  This browser does not support PDFs. Please download the PDF to view it: 
-  <a href="/inf09_tabkalk/print_students-minimal.pdf">Download PDF</a>.
-</iframe>
-</details>
-
-<details>
-<summary>Für Lehrkraft: mit Dateianhängen, QR-Codes und Lösungen</summary>
+<summary>Für Lehrkraft: Skript mit Dateianhängen, QR-Codes und Lösungen</summary>
 <iframe src="/inf09_tabkalk/print_solution.pdf" width="100%" height="500px">
   This browser does not support PDFs. Please download the PDF to view it: 
   <a href="/inf09_tabkalk/print_solution.pdf">Download PDF</a>.
@@ -44,99 +81,18 @@ Das Skript besteht aus einem DIN A4 Teil für die Lernenden zum Ausdrucken und e
 </details>
 
 <details>
-<summary>Für Lehrkraft: Mit Lösung, ansonsten minimal ohne technische Spezialfeatures</summary>
-<iframe src="/inf09_tabkalk/print_solution-minimal.pdf" width="100%" height="500px">
-  This browser does not support PDFs. Please download the PDF to view it: 
-  <a href="/inf09_tabkalk/print_solution-minimal.pdf">Download PDF</a>.
-</iframe>
-</details>
-
-
-
-
-
-
-
-#### Präsentation für die Lehrkraft
-
-Präsentation immer in Acrobat oder Foxit Reader im Präsentationsmodus (Vollbild) starten, da sonst die Animationen, eingebetteten Dateien und Links nicht funktionieren.
-
-<details>
-<summary>mit allen Features</summary>
+<summary>Präsentation mit allen Features</summary>
 <iframe src="/inf09_tabkalk/presentation_all.pdf" width="100%" height="500px">
   This browser does not support PDFs. Please download the PDF to view it: 
   <a href="/inf09_tabkalk/presentation_all.pdf">Download PDF</a>.
 </iframe>
 </details>
 
-<details>
-<summary>ohne Doppelstundeneinteilung</summary>
-<iframe src="/inf09_tabkalk/presentation_nosession.pdf" width="100%" height="500px">
-  This browser does not support PDFs. Please download the PDF to view it: 
-  <a href="/inf09_tabkalk/presentation_nosession.pdf">Download PDF</a>.
-</iframe>
-</details>
-
-<details>
-<summary>ohne Arbeitszeiten-Timer</summary>
-<iframe src="/inf09_tabkalk/presentation_notimer.pdf" width="100%" height="500px">
-  This browser does not support PDFs. Please download the PDF to view it: 
-  <a href="/inf09_tabkalk/presentation_notimer.pdf">Download PDF</a>.
-</iframe>
-</details>
-
-<details>
-<summary>ohne animierte "Bitte aufräumen" Folie</summary>
-<iframe src="/inf09_tabkalk/presentation_noaufraeumen.pdf" width="100%" height="500px">
-  This browser does not support PDFs. Please download the PDF to view it: 
-  <a href="/inf09_tabkalk/presentation_noaufraeumen.pdf">Download PDF</a>.
-</iframe>
-</details>
-
-
-
-<details>
-<summary>minimal = ohne technische Spezialfeatures</summary>
-<iframe src="/inf09_tabkalk/presentation_minimal.pdf" width="100%" height="500px">
-  This browser does not support PDFs. Please download the PDF to view it: 
-  <a href="/inf09_tabkalk/presentation_minimal.pdf">Download PDF</a>.
-</iframe>
-</details>
-
-
-
-<details>
-<summary>minimal, mit Doppelstundeneinteilung</summary>
-<iframe src="/inf09_tabkalk/presentation_minimal-session.pdf" width="100%" height="500px">
-  This browser does not support PDFs. Please download the PDF to view it: 
-  <a href="/inf09_tabkalk/presentation_minimal-session.pdf">Download PDF</a>.
-</iframe>
-</details>
-
-
-
-<details>
-<summary>minimal mit Dateianhängen</summary>
-<iframe src="/inf09_tabkalk/presentation_minimal-attachments.pdf" width="100%" height="500px">
-  This browser does not support PDFs. Please download the PDF to view it: 
-  <a href="/inf09_tabkalk/presentation_minimal-attachments.pdf">Download PDF</a>.
-</iframe>
-</details>
-
-
-
-
-
-
-
-
-
-
 
 
 
 #### Latex Source-Code
-<a href="/inf09_tabkalk/Inf09_TabKalk_Lualatex.zip">Download Latex Source Code</a>.
+auf Github: [github.com/FancyTeachingScripts/Informatik09_Tabellenkalkulation](https://github.com/FancyTeachingScripts/Informatik09_Tabellenkalkulation)
 
 
 
