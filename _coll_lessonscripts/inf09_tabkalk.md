@@ -22,7 +22,7 @@ Das Skript besteht aus einem DIN A4 Teil für die Lernenden zum Ausdrucken und e
 <script>
 const baseUrl = '/inf09_tabkalk/';
 const variants = ['', '_mtg', '_derksen'];
-const variantNames = ['Standard', 'MTG', 'Derksen'];
+const variantNames = ['Standard-Theme', 'MTG', 'Derksen'];
 const files = [
   { label: 'Skript Lernende (alle Features, Coverseite)', name: 'print_students-cover' },
   { label: 'Skript Lernende (alle Features)', name: 'print_students' },
@@ -109,26 +109,3 @@ auf Github: [github.com/FancyTeachingScripts/Informatik09_Tabellenkalkulation](h
 - QR Codes zu Hyperlinks (nur im Skript)
 - Gesamt-Inhaltsverzeichnis mit Hyperlinks vor jeder Doppelstunde für schnelle Navigation und automatische Doppelstunden Erkennung durch Artemis.
 - Alle Versionen sind PDF Dateien, die auf jedem Gerät und Betriebssystem funktionieren. Manche Features erzeugen dafür zusätzlich PDF-Seiten, die Präsentationsdateien sind daher manchmal etwas umfangreicher. 
-
-
-
-### Impressionen
-
-![alt text](/inf09_tabkalk/presentation_toc.png)
-
-![alt text](/inf09_tabkalk/aufgabe_skript.png)
-
-![alt text](/inf09_tabkalk/summaryzoom.png)
-
-![alt text](/inf09_tabkalk/hefteintrag.png)
-
-![alt text](/inf09_tabkalk/hefteintrag.gif)
-
-![alt text](/inf09_tabkalk/aufgabe.gif)
-
-![alt text](/inf09_tabkalk/aufgabe.png)
-
-![alt text](/inf09_tabkalk/attachments_skript.png)
-![alt text](/inf09_tabkalk/attach_pres.png)
-
-![alt text](/inf09_tabkalk/aufraeumen.gif)
