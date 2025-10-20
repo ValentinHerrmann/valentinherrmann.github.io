@@ -33,7 +33,7 @@ const files = [
   { label: 'Skript Lehrkraft (Lösung, alle Features, Coverseite)', name: 'print_solution-cover' },
   { label: 'Skript Lehrkraft (Lösung, alle Features)', name: 'print_solution' },
   { label: 'Skript Lehrkraft (Lösung, minimal)', name: 'print_solution-minimal' },
-  { label: 'Präsentation (alle Features)', name: 'presentation_all' },
+  { label: 'Präsentation (alle Features)', name: 'presentation_full' },
   { label: 'Präsentation (o. Doppelstd.)', name: 'presentation_nosession' },
   { label: 'Präsentation (o. Timer)', name: 'presentation_notimer' },
   { label: 'Präsentation (o. Aufräumen)', name: 'presentation_noaufraeumen' },
@@ -85,9 +85,9 @@ document.write('</tbody></table>');
 
 <details>
 <summary>Präsentation mit allen Features</summary>
-<iframe src="/inf10_db/presentation_all.pdf" width="100%" height="500px">
+<iframe src="/inf10_db/presentation_full.pdf" width="100%" height="500px">
   This browser does not support PDFs. Please download the PDF to view it: 
-  <a href="/inf10_db/presentation_all.pdf">Download PDF</a>.
+  <a href="/inf10_db/presentation_full.pdf">Download PDF</a>.
 </iframe>
 </details>
 
