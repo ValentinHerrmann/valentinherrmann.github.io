@@ -1,5 +1,5 @@
 ---
-title: "Inf 09: Tabellenkalkulation"
+title: "Inf 09: OOP mit Java"
 excerpt: "Komplett-Skript für den bayerischen G9-Lehrplan mit Lückentext-Hefteinträgen und Aufgaben, ausgerichtet auf BYCS-Drive."
 header:
   image: /inf09_oop/banner.png
@@ -7,7 +7,7 @@ header:
 ---
 
 
-Das Skript für das Fach Informatik in der 9. Jahrgangsstufe am Gymnasium (G9) in Bayern deckt das [Lehrplan](https://www.lehrplanplus.bayern.de/fachlehrplan/gymnasium/9/informatik)-Thema Tabellenkalkuation komplett ab. Das Skript ist auf die Nutzung der bayerischen Lernplattform BYCS-Drive ausgerichtet, ist jedoch voll kompatibel mit MS Excel oder LibreOffice Calc.
+Das Skript für das Fach Informatik in der 9. Jahrgangsstufe am Gymnasium (G9) in Bayern deckt das [Lehrplan](https://www.lehrplanplus.bayern.de/fachlehrplan/gymnasium/9/informatik)-Thema Objektorientierte Programmierung und Modellierung (noch nicht aber bald) komplett ab. Das Skript ist auf die Nutzung mit [Blockly2Java](https://b2j.valentin-herrmann.com) (open-source, kostenlos, datenschutzkonform) ausgelegt.
 
 Das Skript besteht aus einem DIN A4 Teil für die Lernenden zum Ausdrucken und einem Präsentations-Teil für die Lehrkraft. Beide Teile sind als PDF-Dateien mit vielen technischen Features umgesetzt. Die Präsentation hierbei immer in Acrobat, Foxit Reader oder Okular im Präsentationsmodus (Vollbild) starten, da sonst die Animationen, eingebetteten Dateien und Links nicht funktionieren.
 
@@ -92,7 +92,7 @@ document.write('</tbody></table>');
 
 
 #### Latex Source-Code
-auf Github: [github.com/FancyTeachingScripts/Informatik09_Tabellenkalkulation](https://github.com/FancyTeachingScripts/Informatik09_Tabellenkalkulation)
+auf Github: [github.com/FancyTeachingScripts/Inf09_OOP](https://github.com/FancyTeachingScripts/Inf09_OOP)
 
 
 
