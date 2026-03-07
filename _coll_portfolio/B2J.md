@@ -14,6 +14,73 @@ header:
 ## The core of all versions of the app
 A [Blockly](https://developers.google.com/blockly) window with a preconfigured toolbox and a real-time translation engine into Java, which is then integrated into two versions of the app.
 
+### Currently supported Language Features using Blockly (constantly grwoing)
+(Coding directly in Java supports all language features that are available in the OnlineIDE)
+
+**Object-Oriented Programming**
+- Classes & Constructors: Supported — one class per .java-file, instantiation in the same and other classes (`new`).
+- Inheritance & `super()`: Partly Supported — single inheritance, overwriting methods and `super(...)` as call inside constructor. No `super.method(...)` calls, no `instanceof`.
+- Instance vs. Static: Supported — instance/static methods and fields.
+- Methods: Supported — methods with/without returns and parameters.
+- Method/Constructor Overloading: NOT supported
+
+**Variables & Scope**
+- Local variables: Supported — first assignment can emit typed declaration; subsequent assignments reassigned.
+- Instance (object) fields: Supported.
+- Static (class) fields: Supported.
+- Method parameters: Supported (read-only inside bodies).
+
+**Types & Type System**
+- Primitive types: Supported — `int`, `double`, `boolean`, and `String` (string-like).
+- Reference types: Supported — `Object`, user-defined classes.
+- Type inference: Best-effort from block connections; cross-class call-site hints improve inference.
+- Fallback: `Object` used when type unknown; LCA used for mixed-class cases.
+- Explicit typing: Supported — explicit type prefixes (e.g., "int count") override inference.
+
+**Control Flow**
+- Conditionals: Supported — `if` / `else if` / `else`
+- Loops: Partly Supported — `while`, repeat N (count), `for` (range), NO for-each
+- Flow control: Supported — `break`, `continue`.
+
+**Methods & Calls**
+- Method declaration: Supported — define/call methods with/without returns and arbitrary number of parameters
+- Method calls: Supported — call own methods or such of specific objects and static calls for methods of any class in the project.
+
+**Collections & Arrays**
+- NOT supported (but planned in near future)
+
+**Strings & Text**
+- Literals & concatenation: Supported.
+- Common ops: Supported — length, substring, charAt, indexOf/lastIndexOf, case, trim, replace, reverse, count.
+- I/O for demos: Partly supported: Console print; NO input (but planned in near future)
+
+**Math & Random**
+- Arithmetic & math functions: Supported — + - * /, pow, sqrt, trig, logs, rounding.
+- Random & helpers: Supported — random int/float, more planned in near future
+
+**Colours & Utilities**
+- NOT supported (but planned in near future)
+
+**Standard Library**
+- Uses common Java classes suitable for student exercises: `Math`, `StringBuilder`, `Random`, more is planned
+
+**Limitations / Pedagogical Notes**
+- Exceptions / try-catch: Not provided — not suitable for exception-handling lessons.
+- File I/O & filesystem: Not available.
+- Concurrency / threads: Not supported.
+- Advanced generics: No supported; generics teaching is constrained.
+- Deep Java APIs (graphics, networking, advanced collections): Not exposed by default.
+- Generated helpers: Some operations use helper methods (e.g., median, prime), which differ from minimal hand-written implementations.
+
+**Toolbox**
+- The toolbox can be configured to reduce supported features to lower the floors of the App.
+
+**Quick teacher decision guide**
+- Basic OOP, control flow, collections, strings, and typing: Yes.
+- Exception handling, file I/O, concurrency, advanced generics, or deep API topics: No / Limited.
+
+
+
 <img src="/B2J/Blockly.png" alt="Blockly" style="border-radius:10px;" />
 
 
