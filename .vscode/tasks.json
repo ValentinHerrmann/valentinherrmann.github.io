@@ -4,10 +4,10 @@
 		{
 			"label": "Kill Jekyll Server",
 			"type": "shell",
-			"command": "powershell",
+			"command": "bash",
 			"args": [
-				"-Command",
-				"& { $processes = Get-Process ruby -ErrorAction SilentlyContinue; if ($processes) { $processes | Stop-Process -Force }; $port4000 = Get-NetTCPConnection -LocalPort 4000 -ErrorAction SilentlyContinue; if ($port4000) { Stop-Process -Id $port4000.OwningProcess -Force -ErrorAction SilentlyContinue }; Start-Sleep 1 }"
+				"-lc",
+				"if command -v lsof >/dev/null 2>&1; then lsof -i :4000 -sTCP:LISTEN -t | xargs -r kill -9; fi\nif command -v pkill >/dev/null 2>&1; then pkill -f \"jekyll serve\" || true; fi\nsleep 1"
 			],
 			"group": "build",
 			"presentation": {

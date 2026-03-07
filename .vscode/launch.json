@@ -5,21 +5,12 @@
             "name": "Launch Jekyll Website",
             "type": "node",
             "request": "launch",
-            "runtimeExecutable": "bundle",
-            "runtimeArgs": [
-                "exec",
-                "jekyll",
-                "serve",
-                "--host",
-                "127.0.0.1",
-                "--port",
-                "4000"
-            ],
+            "program": "${workspaceFolder}/scripts/run-jekyll.js",
             "cwd": "${workspaceFolder}",
             "console": "integratedTerminal",
             "preLaunchTask": "Kill Jekyll Server",
             "serverReadyAction": {
-                "pattern": "Server address: https?://127\\.0\\.0\\.1:4000",
+                "pattern": "Server address: https?://127\\.0\\.0\\.1:4000/?",
                 "uriFormat": "http://localhost:4000",
                 "action": "openExternally"
             },
@@ -29,6 +20,7 @@
                 "order": 1
             },
             "env": {
+                "PATH": "${env:PATH}:/home/vale/snap/code/228/.local/share/gem/ruby/3.3.0/bin",
                 "BUNDLE_GEMFILE": "${workspaceFolder}/Gemfile"
             }
         }
