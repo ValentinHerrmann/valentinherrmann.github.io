@@ -28,7 +28,7 @@ A web-app which uses a slighlty modified version of Martin Pabst's [OnlineIDE](h
 - **UML class diagram** generation
 - **Main method** automatically detected and prepared to execute
 - **Markdown files** a displayed in read-only mode and can e.g. contain exercise statements.
-- **Blocks, Java or both**: Start coding a class with Blockyly and optionally continue with Java or code in either language only.
+- **Blocks, Java or both**: Start coding a class with Blockly and optionally continue with Java or code in either language only.
 - **Git integration** with reduced feature-set (Clone, Pull, Commit+Push) for public and private repositories.
 - **Toolbox configuration**: Either using the integrated visual editor or *.json files. Defines which blocks or categories are available and comes with template configurations. Stored as .json and can be shipped with tempates via Git.
 - **Local import/export** as *.b2j file (internally a *.zip, can be accessed as such after renaming).
@@ -39,19 +39,22 @@ A web-app which uses a slighlty modified version of Martin Pabst's [OnlineIDE](h
 <img src="/B2J/B2J.png" alt="B2J" style="border-radius:10px; width:90%;" />
 
 
-### BlueJ Blockly Extension (BBE)
+## BlueJ Blockly Extension (BBE)
+
+The BlueJ Blockly Extension is an extension for the educational IDE [BlueJ](https://www.bluej.org/) which can be installed on any system which has BlueJ installed. For Windows an msi-Installer is compiled for every Release.
+
+### Core-Features:
+- **Free!** and open-source. Very happy to get contributions, just open a Pull Request on [Github](https://github.com/ValentinHerrmann/BlueJBlocklyExtension).
+- Block-Code is fully translated to java and has no dependencies on Blockly during compilation and execution. Therefore the full BlueJ feature set for java is available.
+- Reduced java set suiting the needs of 9th graders.
+- In templates, classes can be exlicitly locked to prohibit opening them with Blockly.
+- Is installed with a [Gameboard library](https://github.com/ValentinHerrmann/Gameboard) for easy game creation which comes with an online [documentation](https://gameboard.valentin-herrmann.com) and a [set of graphics](https://gameboard.valentin-herrmann.com/resources/images.html) which can of course be extended by the user. 
+
+
+BBE is currently not actively maintained and does not support the latest translation features!
 
 
 <img src="/B2J/BBE.png" alt="BBE" style="border-radius:10px; width:90%;" />
 
 
-<ul style="margin:0 0 5px;">
-  <li>
-    
-  <li>
-    <a href="https://github.com/ValentinHerrmann/BlueJBlocklyExtension"><autocolor>
-    BlueJ Blockly Extension (B2J)</autocolor>
-    </a>: Uses <a href="https://www.bluej.org/"><autocolor>BlueJ</autocolor></a>. as Java Editor and integrates a Blockly window for code editing with Blocks. 
-    This extension is currently not maintained but the latest version is stable.
-  </li>
-</ul>
+
