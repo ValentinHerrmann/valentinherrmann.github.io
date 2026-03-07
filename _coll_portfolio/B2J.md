@@ -1,6 +1,6 @@
 ---
-title: "Blockly2Java & BlueJBlocklyExtension"
-excerpt: "A BlueJ extension for translating blocks to java including a library for simple game development."
+title: "Blockly2Java"
+excerpt: "Dual-language coding with Blockly and Java as OS-independant WebApp or BlueJ Extension"
 header:
   image: B2J/banner.png
   teaser: B2J/overview.png
@@ -14,7 +14,7 @@ header:
 ## The core of all version of the app:
 A [Blockly](https://developers.google.com/blockly) window with preconfigured toolbox and real-time translation engine into java. Which is then integrated into two version of the app.
 
-<img src="/B2J/Blockly.png" alt="Blockly" style="border-radius:10px; width:75%;" />
+<img src="/B2J/Blockly.png" alt="Blockly" style="border-radius:10px;" />
 
 
 ## Blockly2Java: [b2j.valentin-herrmann.com](https://b2j.valentin-herrmann.com)
@@ -36,7 +36,7 @@ A web-app which uses a slighlty modified version of Martin Pabst's [OnlineIDE](h
 - In the future the it's planned to support the full [OnlineIDE graphics library](https://www.learnj.de/doku.php?id=api:documentation:grafik:start) also from Blockly (not just from Java-Code).
 
 
-<img src="/B2J/B2J.png" alt="B2J" style="border-radius:10px; width:90%;" />
+<img src="/B2J/B2J.png" alt="B2J" style="border-radius:10px;" />
 
 
 ## BlueJ Blockly Extension (BBE)
@@ -54,7 +54,7 @@ The BlueJ Blockly Extension is an extension for the educational IDE [BlueJ](http
 BBE is currently not actively maintained and does not support the latest translation features!
 
 
-<img src="/B2J/BBE.png" alt="BBE" style="border-radius:10px; width:90%;" />
+<img src="/B2J/BBE.png" alt="BBE" style="border-radius:10px;" />
 
 
 
