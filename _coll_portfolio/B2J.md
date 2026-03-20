@@ -166,6 +166,15 @@ A [Blockly](https://developers.google.com/blockly) window with a preconfigured t
 
 A web app which uses a slightly modified version of Martin Pabst's [OnlineIDE](https://github.com/martin-pabst/Online-IDE-new-compiler) together with Blockly to provide a feature-rich, OS-independent, dual-language online workspace.
 
+### Exercises (in German)
+Exercise templates can be found here: [github.com/Blockly2Java](https://github.com/Blockly2Java). Feel free to contribute!
+
+Each exercise consists of:
+- a B2J-template for the students to clone (the Github URL can be used to clone by everyone, no login required)
+- a B2J-solution for teachers to use as a reference and to generate test cases from (not public, only for teachers)
+- a README.md file with the exercise statement, which is displayed in read-only mode in the app
+- a set of test cases for use with autograders like [Artemis](https://artemis.tum.de/)
+
 ### Core features
 - **Free and open-source.** Contributions welcome — open a pull request on [GitHub](https://github.com/ValentinHerrmann/Blockly2Java).
 - **Multiple classes**
