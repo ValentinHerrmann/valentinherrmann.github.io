@@ -1,28 +1,11 @@
 ---
-title: "Bachelor Thesis"
+title: "CS education - Bachelor Thesis"
 excerpt: "Comparing different ways to give automated
  feedback on programming exercises in K-12
  education"
 header:
-  image: /assets/img/thesis_wide.png
-  teaser: /assets/img/BEd_cover.png
-sidebar:
-  - title: "Role"
-    image: http://placehold.it/350x250
-    image_alt: "logo"
-    text: "Designer, Front-End Developer"
-  - title: "Responsibilities"
-    text: "Reuters try PR stupid commenters should isn't a business model"
-gallery:
-  - url: /assets/images/unsplash-gallery-image-1.jpg
-    image_path: assets/images/unsplash-gallery-image-1-th.jpg
-    alt: "placeholder image 1"
-  - url: /assets/images/unsplash-gallery-image-2.jpg
-    image_path: assets/images/unsplash-gallery-image-2-th.jpg
-    alt: "placeholder image 2"
-  - url: /assets/images/unsplash-gallery-image-3.jpg
-    image_path: assets/images/unsplash-gallery-image-3-th.jpg
-    alt: "placeholder image 3"
+  image: /b-thesis/banner.png
+  teaser: /b-thesis/overview.png
 ---
 
 ### Abstract
@@ -44,11 +27,11 @@ gallery:
  results are a good starting point for further research.
 
 ### Grade
-Graded 1.0 (best possible grade) by [Prof. Dr. rer. nat. Tilman Michaeli](https://michae.li/)
+Graded 1.0 (best possible grade) by [Prof. Dr. Tilman Michaeli](https://michae.li/)
 
 ### Full Thesis
 
-<iframe src="../../assets/pdf/BachelorThesis.pdf" width="100%" height="600px">
+<iframe src="herrmann2024.pdf" width="100%" height="1000px">
   This browser does not support PDFs. Please download the PDF to view it: 
-  <a href="../../assets/pdf/BachelorThesis.pdf">Download PDF</a>.
+  <a href="herrmann2024.pdf">Download PDF</a>.
 </iframe>

@@ -20,7 +20,7 @@ Besides the sample code in the main.tex of this repository, the following code s
 
 The code and demo can be found at Github: [github.com/ValentinHerrmann/Latex_SummaryZoom](https://github.com/ValentinHerrmann/Latex_SummaryZoom)
 
-<iframe src="/summaryzoom/demo.pdf" width="100%" height="600px">
+<iframe src="/demo.pdf" width="100%" height="600px">
   This browser does not support PDFs. Please download the PDF to view it: 
-  <a href="/summaryzoom/demo.pdf">Download PDF</a>.
+  <a href="/demo.pdf">Download PDF</a>.
 </iframe>
