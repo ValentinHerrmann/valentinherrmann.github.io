@@ -20,7 +20,7 @@ Das Skript besteht aus einem DIN A4 Teil für die Lernenden zum Ausdrucken und e
 ### PDF Dateien zum Download
 
 <script>
-const baseUrl = '/inf09_tabkalk/';
+const baseUrl = '';
 const variants = ['', '_mtg', '_derksen'];
 const variantNames = ['Standard-Theme', 'MTG', 'Derksen'];
 const files = [
@@ -66,25 +66,25 @@ document.write('</tbody></table>');
 
 <details>
 <summary>Für Lernende: Skript mit Dateianhängen, QR-Codes und Coverseite</summary>
-<iframe src="/inf09_tabkalk/print_students.pdf" width="100%" height="500px">
+<iframe src="print_students.pdf" width="100%" height="500px">
   This browser does not support PDFs. Please download the PDF to view it: 
-  <a href="/inf09_tabkalk/print_students-cover.pdf">Download PDF</a>.
+  <a href="print_students-cover.pdf">Download PDF</a>.
 </iframe>
 </details>
 
 <details>
 <summary>Für Lehrkraft: Skript mit Dateianhängen, QR-Codes und Lösungen</summary>
-<iframe src="/inf09_tabkalk/print_solution.pdf" width="100%" height="500px">
+<iframe src="print_solution.pdf" width="100%" height="500px">
   This browser does not support PDFs. Please download the PDF to view it: 
-  <a href="/inf09_tabkalk/print_solution.pdf">Download PDF</a>.
+  <a href="print_solution.pdf">Download PDF</a>.
 </iframe>
 </details>
 
 <details>
 <summary>Präsentation mit allen Features</summary>
-<iframe src="/inf09_tabkalk/presentation_full.pdf" width="100%" height="500px">
+<iframe src="presentation_full.pdf" width="100%" height="500px">
   This browser does not support PDFs. Please download the PDF to view it: 
-  <a href="/inf09_tabkalk/presentation_full.pdf">Download PDF</a>.
+  <a href="presentation_full.pdf">Download PDF</a>.
 </iframe>
 </details>
 
@@ -92,9 +92,8 @@ document.write('</tbody></table>');
 
 
 #### Latex Source-Code
-auf Github: [github.com/FancyTeachingScripts/Informatik09_Tabellenkalkulation](https://github.com/FancyTeachingScripts/Informatik09_Tabellenkalkulation)
-
-
+- auf Github: [github.com/FancyTeachingScripts](https://github.com/FancyTeachingScripts/)
+- hier bitte auch Änderungswünsche als Issue eintragen
 
 
 

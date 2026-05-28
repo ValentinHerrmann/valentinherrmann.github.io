@@ -23,7 +23,7 @@ Das Skript besteht aus einem DIN A4 Teil für die Lernenden zum Ausdrucken und e
 ### PDF Dateien zum Download
 
 <script>
-const baseUrl = '/inf10_db/';
+const baseUrl = '';
 const variants = ['', '_mtg', '_derksen'];
 const variantNames = ['Standard-Theme', 'MTG', 'Derksen'];
 const files = [
@@ -69,25 +69,25 @@ document.write('</tbody></table>');
 
 <details>
 <summary>Für Lernende: Skript mit Dateianhängen, QR-Codes und Coverseite</summary>
-<iframe src="/inf10_db/print_students.pdf" width="100%" height="500px">
+<iframe src="print_students.pdf" width="100%" height="500px">
   This browser does not support PDFs. Please download the PDF to view it: 
-  <a href="/inf10_db/print_students-cover.pdf">Download PDF</a>.
+  <a href="print_students-cover.pdf">Download PDF</a>.
 </iframe>
 </details>
 
 <details>
 <summary>Für Lehrkraft: Skript mit Dateianhängen, QR-Codes und Lösungen</summary>
-<iframe src="/inf10_db/print_solution.pdf" width="100%" height="500px">
+<iframe src="print_solution.pdf" width="100%" height="500px">
   This browser does not support PDFs. Please download the PDF to view it: 
-  <a href="/inf10_db/print_solution.pdf">Download PDF</a>.
+  <a href="print_solution.pdf">Download PDF</a>.
 </iframe>
 </details>
 
 <details>
 <summary>Präsentation mit allen Features</summary>
-<iframe src="/inf10_db/presentation_full.pdf" width="100%" height="500px">
+<iframe src="presentation_full.pdf" width="100%" height="500px">
   This browser does not support PDFs. Please download the PDF to view it: 
-  <a href="/inf10_db/presentation_full.pdf">Download PDF</a>.
+  <a href="presentation_full.pdf">Download PDF</a>.
 </iframe>
 </details>
 
@@ -95,10 +95,8 @@ document.write('</tbody></table>');
 
 
 #### Latex Source-Code
-auf Github: [github.com/FancyTeachingScripts/Informatik10_Datenbanken](https://github.com/FancyTeachingScripts/Informatik10_Datenbanken)
-
-
-
+- auf Github: [github.com/FancyTeachingScripts](https://github.com/FancyTeachingScripts/)
+- hier bitte auch Änderungswünsche als Issue eintragen
 
 
 
@@ -118,23 +116,23 @@ auf Github: [github.com/FancyTeachingScripts/Informatik10_Datenbanken](https://g
 <!--
 ### Impressionen
 
-![alt text](/inf10_db/presentation_toc.png)
+![alt text](presentation_toc.png)
 
-![alt text](/inf10_db/aufgabe_skript.png)
+![alt text](aufgabe_skript.png)
 
-![alt text](/inf10_db/summaryzoom.png)
+![alt text](summaryzoom.png)
 
-![alt text](/inf10_db/hefteintrag.png)
+![alt text](hefteintrag.png)
 
-![alt text](/inf10_db/hefteintrag.gif)
+![alt text](hefteintrag.gif)
 
-![alt text](/inf10_db/aufgabe.gif)
+![alt text](aufgabe.gif)
 
-![alt text](/inf10_db/aufgabe.png)
+![alt text](aufgabe.png)
 
-![alt text](/inf10_db/attachments_skript.png)
-![alt text](/inf10_db/attach_pres.png)
+![alt text](attachments_skript.png)
+![alt text](attach_pres.png)
 
-![alt text](/inf10_db/aufraeumen.gif)
+![alt text](aufraeumen.gif)
 -->
 

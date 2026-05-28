@@ -14,7 +14,7 @@ Dieses Projekt zeigt und erklärt die technischen Features, die in den Unterrich
 ### PDF Dateien zum Download
 
 <script>
-const baseUrl = '/demo/';
+const baseUrl = '';
 const variants = [''];
 const variantNames = ['Standard-Theme'];
 const files = [
@@ -60,25 +60,25 @@ document.write('</tbody></table>');
 
 <details>
 <summary>Für Lernende: Skript mit Dateianhängen, QR-Codes und Coverseite</summary>
-<iframe src="/demo/print_students.pdf" width="100%" height="500px">
+<iframe src="print_students.pdf" width="100%" height="500px">
   This browser does not support PDFs. Please download the PDF to view it: 
-  <a href="/demo/print_students-cover.pdf">Download PDF</a>.
+  <a href="print_students-cover.pdf">Download PDF</a>.
 </iframe>
 </details>
 
 <details>
 <summary>Für Lehrkraft: Skript mit Dateianhängen, QR-Codes und Lösungen</summary>
-<iframe src="/demo/print_solution.pdf" width="100%" height="500px">
+<iframe src="print_solution.pdf" width="100%" height="500px">
   This browser does not support PDFs. Please download the PDF to view it: 
-  <a href="/demo/print_solution.pdf">Download PDF</a>.
+  <a href="print_solution.pdf">Download PDF</a>.
 </iframe>
 </details>
 
 <details>
 <summary>Präsentation mit allen Features</summary>
-<iframe src="/demo/presentation_full.pdf" width="100%" height="500px">
+<iframe src="presentation_full.pdf" width="100%" height="500px">
   This browser does not support PDFs. Please download the PDF to view it: 
-  <a href="/demo/presentation_full.pdf">Download PDF</a>.
+  <a href="presentation_full.pdf">Download PDF</a>.
 </iframe>
 </details>
 
