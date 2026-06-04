@@ -176,6 +176,8 @@ include:
   - .htaccess
   - _pages
 exclude:
+  - assets/img/overview.xcf
+  - assets/img/banner.xcf
   - "*.sublime-project"
   - "*.sublime-workspace"
   - vendor
