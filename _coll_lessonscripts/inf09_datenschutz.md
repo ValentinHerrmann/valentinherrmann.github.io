@@ -1,6 +1,6 @@
 ---
 title: "Inf 09: Datenschutz"
-excerpt: "Komplett-Skript für den bayerischen G9-Lehrplan mit Lückentext-Hefteinträgen und Aufgaben."
+excerpt: "Teil-Skript für den bayerischen G9-Lehrplan mit Lückentext-Hefteinträgen und Aufgaben."
 header:
   image: /inf09_datenschutz/banner.png
   teaser: /inf09_datenschutz/overview.png
