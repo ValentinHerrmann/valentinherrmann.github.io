@@ -1,13 +1,13 @@
 ---
-title: "Inf 09: OOP mit Java"
-excerpt: "Komplett-Skript für den bayerischen G9-Lehrplan mit Lückentext-Hefteinträgen und Aufgaben, ausgerichtet auf BYCS-Drive."
+title: "Inf 09: Datenschutz"
+excerpt: "Komplett-Skript für den bayerischen G9-Lehrplan mit Lückentext-Hefteinträgen und Aufgaben."
 header:
-  image: /inf09_oop/banner.png
-  teaser: /inf09_oop/overview.png
+  image: /inf09_datenschutz/banner.png
+  teaser: /inf09_datenschutz/overview.png
 ---
 
 
-Das Skript für das Fach Informatik in der 9. Jahrgangsstufe am Gymnasium (G9) in Bayern deckt das [Lehrplan](https://www.lehrplanplus.bayern.de/fachlehrplan/gymnasium/9/informatik)-Thema Objektorientierte Programmierung und Modellierung (noch nicht aber bald) komplett ab. Das Skript ist auf die Nutzung mit [Blockly2Java](https://blokcly2java.de) (open-source, kostenlos, datenschutzkonform) ausgelegt.
+Das Skript für das Fach Informatik in der 9. Jahrgangsstufe am Gymnasium (G9) in Bayern deckt das [Lehrplan](https://www.lehrplanplus.bayern.de/fachlehrplan/gymnasium/9/informatik) teilweise ab.
 
 Das Skript besteht aus einem DIN A4 Teil für die Lernenden zum Ausdrucken und einem Präsentations-Teil für die Lehrkraft. Beide Teile sind als PDF-Dateien mit vielen technischen Features umgesetzt. Die Präsentation hierbei immer in Acrobat, Foxit Reader oder Okular im Präsentationsmodus (Vollbild) starten, da sonst die Animationen, eingebetteten Dateien und Links nicht funktionieren.
 
