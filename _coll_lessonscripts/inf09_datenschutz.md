@@ -97,14 +97,36 @@ document.write('</tbody></table>');
 
 
 
-
 ### (Technische) Features
-- Farbliche Kodierung für Hefteinträge und Aufgaben.
-- In der Präsentation in ihrer Reihenfolge nacheinander auftauchende Lösungen für Lücken und Aufgaben.
-- Arbeitszeit Timer für Aufgaben (nur Adobe Acrobat und Foxit Readers) zeigt verbleibende Zeit in Minutenschritten an. Timer startet nachdem auf der Folie 1x weiter geklickt wurde (Leiste am unteren Rand ändert ihre Farbe).
-- Ins PDF eingebettete Vorlage- und Lösungsdateien (z.B. Excel, PDF, ...) zum Öffnen per Doppelklick auch während der Präsentation.
-- "Bitte Aufräumen" Abschlussfolie mit Animation und diskretem Link zu ihr auf jeder Seite
-- Übersichtfolie am Anfang jeder Doppelstunde mit Hyperlink-Thumbnails der Folien der Vor- und aktuellen Stunde (ähnlich PPT Summary Zoom)
-- QR Codes zu Hyperlinks (nur im Skript)
+- `Farbliche Kodierung` für Hefteinträge und Aufgaben.
+- `Nacheinander eingeblendete Lösungen` in der Präsentation für Lücken und Aufgaben.
+- `Arbeitszeit Timer` für Aufgaben (getestet mit BeamerPresenter, Acrobat, Foxit, Okular, pdfpc) zeigt verbleibende Zeit als Ladebalken in Minutenschritten an. Timer startet nachdem auf der Folie 1x weiter geklickt wurde (Leiste am unteren Rand ändert ihre Farbe).
+- `Eingebettete Vorlage- und Lösungsdateien` (z.B. Excel, PDF, ...) zum Öffnen per Doppelklick auch während der Präsentation.
+- `"Bitte Aufräumen"` Abschlussfolie mit Animation und diskretem Link zu ihr auf jeder Seite (funktioniert in BeamerPresenter nicht)
+- `Übersichtfolie am Anfang` jeder Doppelstunde mit `Hyperlink-Thumbnails` der Folien der Vor- und aktuellen Stunde (ähnlich PPT Summary Zoom)
+- `QR Codes` zu Hyperlinks (nur im Skript)
 - Gesamt-Inhaltsverzeichnis mit Hyperlinks vor jeder Doppelstunde für schnelle Navigation und automatische Doppelstunden Erkennung durch Artemis.
-- Alle Versionen sind PDF Dateien, die auf jedem Gerät und Betriebssystem funktionieren. Manche Features erzeugen dafür zusätzlich PDF-Seiten, die Präsentationsdateien sind daher manchmal etwas umfangreicher. 
+- `Alle Versionen sind PDF Dateien`, die auf jedem Gerät und Betriebssystem funktionieren. Manche Features erzeugen dafür zusätzlich PDF-Seiten, die Präsentationsdateien sind daher manchmal etwas umfangreicher. 
+
+
+
+### Impressionen aus dem Skript Tabellenkalkulation 09
+
+![alt text](/inf09_tabkalk/presentation_toc.png)
+
+![alt text](/inf09_tabkalk/aufgabe_skript.png)
+
+![alt text](/inf09_tabkalk/summaryzoom.png)
+
+![alt text](/inf09_tabkalk/hefteintrag.png)
+
+![alt text](/inf09_tabkalk/hefteintrag.gif)
+
+![alt text](/inf09_tabkalk/aufgabe.gif)
+
+![alt text](/inf09_tabkalk/aufgabe.png)
+
+![alt text](/inf09_tabkalk/attachments_skript.png)
+![alt text](/inf09_tabkalk/attach_pres.png)
+
+![alt text](/inf09_tabkalk/aufraeumen.gif)
