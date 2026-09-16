@@ -33,13 +33,13 @@ const files = [
   { label: 'Skript Lehrkraft (Lösung, alle Features, Coverseite)', name: 'print_solution-cover' },
   { label: 'Skript Lehrkraft (Lösung, alle Features)', name: 'print_solution' },
   { label: 'Skript Lehrkraft (Lösung, minimal)', name: 'print_solution-minimal' },
-  { label: 'Präsentation (alle Features)', name: 'presentation_full' },
-  { label: 'Präsentation (o. Doppelstd.)', name: 'presentation_nosession' },
-  { label: 'Präsentation (o. Timer)', name: 'presentation_notimer' },
-  { label: 'Präsentation (o. Aufräumen)', name: 'presentation_noaufraeumen' },
-  { label: 'Präsentation (minimal)', name: 'presentation_minimal' },
-  { label: 'Präsentation (min. + Doppelstd.)', name: 'presentation_minimal-session' },
-  { label: 'Präsentation (min. + Anhänge)', name: 'presentation_minimal-attachments' }
+  { label: 'Präsentation (alle Features)', name: 'presentation_full', bright: true },
+  { label: 'Präsentation (o. Doppelstd.)', name: 'presentation_nosession', bright: true },
+  { label: 'Präsentation (o. Timer)', name: 'presentation_notimer', bright: true },
+  { label: 'Präsentation (o. Aufräumen)', name: 'presentation_noaufraeumen', bright: true },
+  { label: 'Präsentation (minimal)', name: 'presentation_minimal', bright: true },
+  { label: 'Präsentation (min. + Doppelstd.)', name: 'presentation_minimal-session', bright: true },
+  { label: 'Präsentation (min. + Anhänge)', name: 'presentation_minimal-attachments', bright: true }
 ];
 
 document.write('<table>');
@@ -51,8 +51,16 @@ files.forEach(file => {
   document.write('<tr><td><strong>' + file.label + '</strong></td>');
   variants.forEach((variant, idx) => {
     const url = baseUrl + file.name + variant + '.pdf';
-    const linkText = idx === 0 ? file.name + '.pdf' : variantNames[idx];
-    document.write('<td><a href="' + url + '">' + linkText + '</a></td>');
+    const linkText = idx === 0 && !file.bright ? file.name + '.pdf' : variantNames[idx];
+    document.write('<td>');
+    if (file.bright) {
+      document.write('<a href="' + url + '">&#9790; Dark</a><br>');
+      const brightUrl = baseUrl + file.name + '-bright' + variant + '.pdf';
+      document.write('<a href="' + brightUrl + '">&#9728; Bright</a>');
+    } else {
+      document.write('<a href="' + url + '">' + linkText + '</a>');
+    }
+    document.write('</td>');
   });
   document.write('</tr>');
 });
