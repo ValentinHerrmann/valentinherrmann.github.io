@@ -20,10 +20,12 @@ This is a fork of [omarroth/doubletake](https://github.com/omarroth/doubletake) 
 
 <img src="/doubletake-ui/screenshot.png" alt="Doubletake desktop app" class="align-right" style="width:260px; border-radius:10px;" />
 
-- **Desktop app** `doubletake-ui` (GTK 4): lists the AirPlay receivers and Miracast displays nearby, asks for the PIN, starts and stops mirroring with one click.
+- **Desktop app** `doubletake-ui` (GTK 4): lists the AirPlay receivers and Miracast displays nearby, asks for the PIN, starts and stops mirroring with one click. The list stays still while discovery runs, even on networks with many receivers.
+- **Your desktop's own sharing dialog** picks a screen or a window on every connection. While connecting, the app shows the receiver and can cancel a wrong choice.
 - **Miracast** (experimental, since v0.7.0): mirrors to Miracast TVs, projectors and dongles over Wi-Fi Direct, with sound, up to 1080p. No second app such as GNOME Network Displays needed.
-- **System tray** and **start on login**. Closing the window keeps the cast running.
-- **Capture source choice:** Screen, Window or Ask, in the app and as `-source any|monitor|window` on the command line.
+- **Freeze, Blackout and Mute** while casting, for AirPlay and Miracast: keep the current picture or show black on the projector while you prepare the next thing.
+- **Sound like an HDMI display:** while casting, a "Doubletake" output replaces the speakers and follows the system volume slider.
+- **System tray:** the window hides to the tray once casting starts, and the tray menu shows the receiver and the casting controls. **Quit** stops casting. Optional **start on login** and **keep screen awake while casting**.
 - **One-line install, update and uninstall** from the fork's releases (no root needed).
 
 <div style="clear:both;"></div>
