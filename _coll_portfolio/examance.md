@@ -75,6 +75,19 @@ Teachers write exams in LaTeX, print them with QR codes, and grade the answers a
 
 </details>
 
+<details>
+<summary><b>LaTeX Snippets Demo</b> (template vs. solution side-by-side)</summary>
+
+{% include synced-pdf-viewer.html
+  left_pdf="/examance/snippets_template.pdf"
+  right_pdf="/examance/snippets_solution.pdf"
+  left_title="Template (Student Sheet)"
+  right_title="Solution (Teacher Sheet)"
+  id="examance-snippets-viewer"
+%}
+
+</details>
+
 ## Privacy and security
 
 - **End-to-end encrypted:** names, scans, points and annotations are encrypted in the browser with AES-256-GCM before they are stored.

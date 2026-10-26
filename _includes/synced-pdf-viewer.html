@@ -1,0 +1,695 @@
+<!-- Synced PDF Viewer Include -->
+{% assign viewer_id = include.id | default: "synced-pdf" %}
+{% assign left_pdf = include.left_pdf %}
+{% assign right_pdf = include.right_pdf %}
+{% assign left_title = include.left_title | default: "Template" %}
+{% assign right_title = include.right_title | default: "Solution" %}
+
+<div id="{{ viewer_id }}" class="synced-pdf-wrapper">
+  <!-- Controls Bar -->
+  <div class="synced-pdf-toolbar">
+    <div class="toolbar-group nav-group">
+      <button type="button" class="btn-pdf-control btn-prev" title="Previous Page">◀</button>
+      <span class="page-indicator">Page <b class="current-page">1</b> / <b class="total-pages">--</b></span>
+      <button type="button" class="btn-pdf-control btn-next" title="Next Page">▶</button>
+    </div>
+
+    <div class="toolbar-group zoom-group">
+      <button type="button" class="btn-pdf-control btn-zoom-out" title="Zoom Out">−</button>
+      <span class="zoom-level">100%</span>
+      <button type="button" class="btn-pdf-control btn-zoom-in" title="Zoom In">+</button>
+      <button type="button" class="btn-pdf-control btn-zoom-fit" title="Fit Width">Fit</button>
+    </div>
+
+    <div class="toolbar-group action-group">
+      <button type="button" class="btn-pdf-control btn-sync active" title="Toggle Synchronized Scrolling">
+        <span class="sync-icon">🔒</span> <span class="sync-text">Sync</span>
+      </button>
+      <button type="button" class="btn-pdf-control btn-fullscreen" title="Toggle Fullscreen">
+        <span class="fs-icon">⛶</span> Fullscreen
+      </button>
+    </div>
+
+    <!-- Mobile Tab Switcher (Visible on small screens) -->
+    <div class="toolbar-group mobile-tabs">
+      <button type="button" class="tab-btn active" data-pane="left">{{ left_title }}</button>
+      <button type="button" class="tab-btn" data-pane="right">{{ right_title }}</button>
+    </div>
+  </div>
+
+  <!-- Dual Viewer Grid -->
+  <div class="synced-pdf-grid">
+    <!-- Left Document Column -->
+    <div class="synced-pdf-column left-column">
+      <div class="column-header">
+        <span class="column-title">📄 {{ left_title }}</span>
+        <a href="{{ left_pdf }}" download class="column-download" target="_blank" rel="noopener">Download PDF</a>
+      </div>
+      <div class="pdf-scroll-pane left-pane" data-side="left">
+        <div class="pdf-pages-container"></div>
+      </div>
+    </div>
+
+    <!-- Right Document Column -->
+    <div class="synced-pdf-column right-column">
+      <div class="column-header">
+        <span class="column-title">📝 {{ right_title }}</span>
+        <a href="{{ right_pdf }}" download class="column-download" target="_blank" rel="noopener">Download PDF</a>
+      </div>
+      <div class="pdf-scroll-pane right-pane" data-side="right">
+        <div class="pdf-pages-container"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<style>
+#{{ viewer_id }}.synced-pdf-wrapper {
+  margin: 1.5em 0;
+  border: 1px solid var(--border-color, #444);
+  border-radius: 8px;
+  background: var(--background-color, #1a1a1a);
+  color: var(--text-color, #eee);
+  font-family: inherit;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+#{{ viewer_id }} .synced-pdf-toolbar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem;
+  padding: 0.5rem 0.75rem;
+  background: rgba(0, 0, 0, 0.25);
+  border-bottom: 1px solid var(--border-color, #444);
+  font-size: 0.85rem;
+  user-select: none;
+}
+
+#{{ viewer_id }} .toolbar-group {
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+}
+
+#{{ viewer_id }} .btn-pdf-control,
+#{{ viewer_id }} .tab-btn {
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  color: inherit;
+  border-radius: 4px;
+  padding: 0.25rem 0.55rem;
+  cursor: pointer;
+  font-size: 0.82rem;
+  line-height: 1.2;
+  transition: all 0.15s ease;
+}
+
+#{{ viewer_id }} .btn-pdf-control:hover,
+#{{ viewer_id }} .tab-btn:hover {
+  background: rgba(255, 255, 255, 0.18);
+  border-color: rgba(255, 255, 255, 0.3);
+}
+
+#{{ viewer_id }} .btn-pdf-control.active,
+#{{ viewer_id }} .tab-btn.active {
+  background: #2f74c0;
+  border-color: #4a90e2;
+  color: #fff;
+}
+
+#{{ viewer_id }} .page-indicator,
+#{{ viewer_id }} .zoom-level {
+  padding: 0 0.3rem;
+  font-variant-numeric: tabular-nums;
+  min-width: 4.5rem;
+  text-align: center;
+}
+
+#{{ viewer_id }} .mobile-tabs {
+  display: none;
+}
+
+#{{ viewer_id }} .synced-pdf-grid {
+  display: flex;
+  flex-direction: row;
+  height: 650px;
+  background: #252528;
+}
+
+#{{ viewer_id }} .synced-pdf-column {
+  flex: 1 1 50%;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  border-right: 1px solid var(--border-color, #444);
+}
+
+#{{ viewer_id }} .synced-pdf-column:last-child {
+  border-right: none;
+}
+
+#{{ viewer_id }} .column-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.4rem 0.75rem;
+  background: rgba(0, 0, 0, 0.18);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  font-size: 0.82rem;
+  font-weight: 600;
+}
+
+#{{ viewer_id }} .column-download {
+  font-size: 0.75rem;
+  color: #63b3ed;
+  text-decoration: none;
+}
+
+#{{ viewer_id }} .column-download:hover {
+  text-decoration: underline;
+}
+
+#{{ viewer_id }} .pdf-scroll-pane {
+  flex: 1;
+  overflow-y: auto;
+  overflow-x: auto;
+  padding: 1rem;
+  scroll-behavior: auto;
+}
+
+#{{ viewer_id }} .pdf-pages-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.25rem;
+  margin: 0 auto;
+}
+
+#{{ viewer_id }} .pdf-page-wrapper {
+  position: relative;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+  background: #ffffff;
+  border-radius: 2px;
+  overflow: hidden;
+  transition: width 0.1s ease;
+}
+
+#{{ viewer_id }} .pdf-page-wrapper canvas {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+#{{ viewer_id }} .pdf-page-wrapper .page-loading {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #888;
+  font-size: 0.85rem;
+  background: #fdfdfd;
+}
+
+#{{ viewer_id }} .pdf-page-wrapper .page-number-tag {
+  position: absolute;
+  top: 4px;
+  right: 6px;
+  background: rgba(0, 0, 0, 0.6);
+  color: #fff;
+  font-size: 0.65rem;
+  padding: 1px 5px;
+  border-radius: 3px;
+  pointer-events: none;
+}
+
+/* Fullscreen mode styling */
+#{{ viewer_id }}.is-fullscreen {
+  position: fixed !important;
+  inset: 0 !important;
+  z-index: 99999 !important;
+  margin: 0 !important;
+  border-radius: 0 !important;
+  height: 100vh !important;
+  width: 100vw !important;
+}
+
+#{{ viewer_id }}.is-fullscreen .synced-pdf-grid {
+  height: calc(100vh - 48px) !important;
+}
+
+/* Mobile responsive layout */
+@media (max-width: 768px) {
+  #{{ viewer_id }} .mobile-tabs {
+    display: flex;
+    order: 4;
+    width: 100%;
+    justify-content: center;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    padding-top: 0.35rem;
+  }
+
+  #{{ viewer_id }} .mobile-tabs .tab-btn {
+    flex: 1;
+    text-align: center;
+  }
+
+  #{{ viewer_id }} .synced-pdf-column.left-column,
+  #{{ viewer_id }} .synced-pdf-column.right-column {
+    display: none;
+    flex: 1 1 100%;
+    border-right: none;
+  }
+
+  #{{ viewer_id }}[data-active-tab="left"] .left-column {
+    display: flex;
+  }
+
+  #{{ viewer_id }}[data-active-tab="right"] .right-column {
+    display: flex;
+  }
+
+  #{{ viewer_id }} .synced-pdf-grid {
+    height: 520px;
+  }
+}
+</style>
+
+<script>
+(function() {
+  const root = document.getElementById("{{ viewer_id }}");
+  if (!root) return;
+
+  const leftPdfUrl = "{{ left_pdf }}";
+  const rightPdfUrl = "{{ right_pdf }}";
+
+  const leftPane = root.querySelector(".left-pane");
+  const rightPane = root.querySelector(".right-pane");
+  const leftPagesContainer = leftPane.querySelector(".pdf-pages-container");
+  const rightPagesContainer = rightPane.querySelector(".pdf-pages-container");
+
+  const btnPrev = root.querySelector(".btn-prev");
+  const btnNext = root.querySelector(".btn-next");
+  const currentPageEl = root.querySelector(".current-page");
+  const totalPagesEl = root.querySelector(".total-pages");
+  const btnZoomIn = root.querySelector(".btn-zoom-in");
+  const btnZoomOut = root.querySelector(".btn-zoom-out");
+  const btnZoomFit = root.querySelector(".btn-zoom-fit");
+  const zoomLevelEl = root.querySelector(".zoom-level");
+  const btnSync = root.querySelector(".btn-sync");
+  const btnFullscreen = root.querySelector(".btn-fullscreen");
+  const mobileTabBtns = root.querySelectorAll(".mobile-tabs .tab-btn");
+
+  let pdfDocLeft = null;
+  let pdfDocRight = null;
+  let numPages = 0;
+  let isSyncing = false;
+  let syncEnabled = true;
+  let activeScroller = null;
+  let scrollTimeout = null;
+  let zoomMultiplier = 1.0;
+  let isFitWidth = true;
+  let initialized = false;
+  let intersectionObserver = null;
+  const renderedPages = new Map(); // key: "left-1", "right-1"
+
+  root.setAttribute("data-active-tab", "left");
+
+  // Load PDF.js library if not already present
+  function ensurePdfJs(callback) {
+    if (window.pdfjsLib) {
+      window.pdfjsLib.GlobalWorkerOptions.workerSrc =
+        "https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.worker.min.js";
+      callback();
+      return;
+    }
+
+    const script = document.createElement("script");
+    script.src = "https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js";
+    script.onload = function() {
+      window.pdfjsLib.GlobalWorkerOptions.workerSrc =
+        "https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.worker.min.js";
+      callback();
+    };
+    document.head.appendChild(script);
+  }
+
+  // Load both PDF documents
+  async function loadDocuments() {
+    try {
+      const [docLeft, docRight] = await Promise.all([
+        window.pdfjsLib.getDocument(leftPdfUrl).promise,
+        window.pdfjsLib.getDocument(rightPdfUrl).promise
+      ]);
+      pdfDocLeft = docLeft;
+      pdfDocRight = docRight;
+      numPages = Math.max(docLeft.numPages, docRight.numPages);
+      totalPagesEl.textContent = numPages;
+
+      setupPlaceholders();
+      setupObserver();
+      updateLayout();
+      updatePageTracker();
+    } catch (err) {
+      console.error("Error loading PDFs:", err);
+      leftPagesContainer.innerHTML = `<div style="padding:2rem;color:#e53e3e;">Failed to load Template PDF: ${err.message}</div>`;
+      rightPagesContainer.innerHTML = `<div style="padding:2rem;color:#e53e3e;">Failed to load Solution PDF: ${err.message}</div>`;
+    }
+  }
+
+  // Create page placeholder slots for all pages (A4 aspect ratio: 1 : 1.4142)
+  function setupPlaceholders() {
+    leftPagesContainer.innerHTML = "";
+    rightPagesContainer.innerHTML = "";
+
+    for (let p = 1; p <= numPages; p++) {
+      createPageSlot(leftPagesContainer, "left", p);
+      createPageSlot(rightPagesContainer, "right", p);
+    }
+  }
+
+  function createPageSlot(container, side, pageNum) {
+    const slot = document.createElement("div");
+    slot.className = "pdf-page-wrapper";
+    slot.dataset.side = side;
+    slot.dataset.page = pageNum;
+    slot.id = `${side}-page-${pageNum}`;
+
+    const loading = document.createElement("div");
+    loading.className = "page-loading";
+    loading.textContent = `Page ${pageNum} loading...`;
+
+    const tag = document.createElement("span");
+    tag.className = "page-number-tag";
+    tag.textContent = pageNum;
+
+    slot.appendChild(loading);
+    slot.appendChild(tag);
+    container.appendChild(slot);
+  }
+
+  // Set widths of page placeholders based on container width & zoom
+  function updateLayout() {
+    const availableWidth = leftPane.clientWidth - 32;
+    if (availableWidth <= 50) return;
+
+    let targetWidth;
+    if (isFitWidth) {
+      targetWidth = Math.max(280, availableWidth);
+      zoomMultiplier = 1.0;
+      zoomLevelEl.textContent = "Fit";
+    } else {
+      targetWidth = Math.max(200, (availableWidth * zoomMultiplier));
+      zoomLevelEl.textContent = `${Math.round(zoomMultiplier * 100)}%`;
+    }
+
+    const targetHeight = targetWidth * 1.4142;
+
+    root.querySelectorAll(".pdf-page-wrapper").forEach(slot => {
+      slot.style.width = `${Math.floor(targetWidth)}px`;
+      slot.style.height = `${Math.floor(targetHeight)}px`;
+    });
+  }
+
+  // IntersectionObserver to render pages on demand
+  function setupObserver() {
+    if (intersectionObserver) {
+      intersectionObserver.disconnect();
+    }
+
+    intersectionObserver = new IntersectionObserver(
+      (entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            const slot = entry.target;
+            const side = slot.dataset.side;
+            const pageNum = parseInt(slot.dataset.page, 10);
+            renderPage(side, pageNum, slot);
+          }
+        });
+      },
+      {
+        rootMargin: "400px 0px"
+      }
+    );
+
+    root.querySelectorAll(".pdf-page-wrapper").forEach(slot => {
+      intersectionObserver.observe(slot);
+    });
+  }
+
+  // Render canvas inside slot
+  async function renderPage(side, pageNum, slot) {
+    const key = `${side}-${pageNum}`;
+    const doc = side === "left" ? pdfDocLeft : pdfDocRight;
+    if (!doc || pageNum > doc.numPages) return;
+
+    // Check if current slot already rendered at correct width
+    const existingCanvas = slot.querySelector("canvas");
+    const currentSlotWidth = slot.clientWidth;
+    if (existingCanvas && renderedPages.get(key) === currentSlotWidth) {
+      return;
+    }
+
+    try {
+      const page = await doc.getPage(pageNum);
+      const initialViewport = page.getViewport({ scale: 1.0 });
+      const scale = currentSlotWidth / initialViewport.width;
+      const viewport = page.getViewport({ scale: scale });
+
+      const outputScale = window.devicePixelRatio || 1;
+      const canvas = existingCanvas || document.createElement("canvas");
+      canvas.width = Math.floor(viewport.width * outputScale);
+      canvas.height = Math.floor(viewport.height * outputScale);
+      canvas.style.width = `${Math.floor(viewport.width)}px`;
+      canvas.style.height = `${Math.floor(viewport.height)}px`;
+
+      const ctx = canvas.getContext("2d");
+      const transform = outputScale !== 1 ? [outputScale, 0, 0, outputScale, 0, 0] : null;
+
+      const renderContext = {
+        canvasContext: ctx,
+        transform: transform,
+        viewport: viewport
+      };
+
+      await page.render(renderContext).promise;
+
+      const loading = slot.querySelector(".page-loading");
+      if (loading) loading.style.display = "none";
+      if (!existingCanvas) slot.appendChild(canvas);
+
+      renderedPages.set(key, currentSlotWidth);
+    } catch (e) {
+      console.error(`Error rendering ${side} page ${pageNum}:`, e);
+    }
+  }
+
+  // Invalidate rendered pages when zooming or resizing
+  function reRenderVisiblePages() {
+    renderedPages.clear();
+    root.querySelectorAll(".pdf-page-wrapper").forEach(slot => {
+      const rect = slot.getBoundingClientRect();
+      const inView = (
+        rect.top < window.innerHeight + 400 &&
+        rect.bottom > -400
+      );
+      if (inView) {
+        renderPage(slot.dataset.side, parseInt(slot.dataset.page, 10), slot);
+      }
+    });
+  }
+
+  // Scroll Synchronization
+  function syncScroll(source, target) {
+    if (!syncEnabled || isSyncing) return;
+    if (activeScroller && activeScroller !== source) return;
+
+    activeScroller = source;
+    clearTimeout(scrollTimeout);
+    scrollTimeout = setTimeout(() => { activeScroller = null; }, 100);
+
+    const maxSource = source.scrollHeight - source.clientHeight;
+    const maxTarget = target.scrollHeight - target.clientHeight;
+
+    if (maxSource > 0 && maxTarget > 0) {
+      const ratio = source.scrollTop / maxSource;
+      isSyncing = true;
+      target.scrollTop = ratio * maxTarget;
+      isSyncing = false;
+    }
+
+    updatePageTracker();
+  }
+
+  leftPane.addEventListener("scroll", () => syncScroll(leftPane, rightPane), { passive: true });
+  rightPane.addEventListener("scroll", () => syncScroll(rightPane, leftPane), { passive: true });
+
+  // Page tracker
+  function updatePageTracker() {
+    const activePane = root.getAttribute("data-active-tab") === "right" ? rightPane : leftPane;
+    const slots = activePane.querySelectorAll(".pdf-page-wrapper");
+    if (!slots.length) return;
+
+    let current = 1;
+    const paneRect = activePane.getBoundingClientRect();
+    const threshold = paneRect.top + 100;
+
+    slots.forEach(slot => {
+      const r = slot.getBoundingClientRect();
+      if (r.top <= threshold) {
+        current = parseInt(slot.dataset.page, 10);
+      }
+    });
+
+    currentPageEl.textContent = current;
+  }
+
+  // Page Navigation buttons
+  function scrollToPage(pageNum) {
+    pageNum = Math.max(1, Math.min(numPages, pageNum));
+    const targetLeft = leftPagesContainer.querySelector(`[data-page="${pageNum}"]`);
+    const targetRight = rightPagesContainer.querySelector(`[data-page="${pageNum}"]`);
+
+    if (targetLeft) {
+      targetLeft.scrollIntoView({ behavior: "smooth", block: "start" });
+    }
+    if (!syncEnabled && targetRight) {
+      targetRight.scrollIntoView({ behavior: "smooth", block: "start" });
+    }
+    currentPageEl.textContent = pageNum;
+  }
+
+  btnPrev.addEventListener("click", () => {
+    const cur = parseInt(currentPageEl.textContent, 10) || 1;
+    scrollToPage(cur - 1);
+  });
+
+  btnNext.addEventListener("click", () => {
+    const cur = parseInt(currentPageEl.textContent, 10) || 1;
+    scrollToPage(cur + 1);
+  });
+
+  // Zoom controls
+  btnZoomIn.addEventListener("click", () => {
+    isFitWidth = false;
+    zoomMultiplier = Math.min(2.5, zoomMultiplier + 0.2);
+    updateLayout();
+    reRenderVisiblePages();
+  });
+
+  btnZoomOut.addEventListener("click", () => {
+    isFitWidth = false;
+    zoomMultiplier = Math.max(0.5, zoomMultiplier - 0.2);
+    updateLayout();
+    reRenderVisiblePages();
+  });
+
+  btnZoomFit.addEventListener("click", () => {
+    isFitWidth = true;
+    updateLayout();
+    reRenderVisiblePages();
+  });
+
+  // Sync toggle
+  btnSync.addEventListener("click", () => {
+    syncEnabled = !syncEnabled;
+    btnSync.classList.toggle("active", syncEnabled);
+    const icon = btnSync.querySelector(".sync-icon");
+    const text = btnSync.querySelector(".sync-text");
+    if (syncEnabled) {
+      icon.textContent = "🔒";
+      text.textContent = "Sync";
+      // Instantly sync right pane to left
+      const maxSource = leftPane.scrollHeight - leftPane.clientHeight;
+      const maxTarget = rightPane.scrollHeight - rightPane.clientHeight;
+      if (maxSource > 0 && maxTarget > 0) {
+        rightPane.scrollTop = (leftPane.scrollTop / maxSource) * maxTarget;
+      }
+    } else {
+      icon.textContent = "🔓";
+      text.textContent = "Unsynced";
+    }
+  });
+
+  // Fullscreen toggle
+  btnFullscreen.addEventListener("click", () => {
+    if (!root.classList.contains("is-fullscreen")) {
+      root.classList.add("is-fullscreen");
+      btnFullscreen.innerHTML = `<span class="fs-icon">✕</span> Exit`;
+    } else {
+      root.classList.remove("is-fullscreen");
+      btnFullscreen.innerHTML = `<span class="fs-icon">⛶</span> Fullscreen`;
+    }
+    setTimeout(() => {
+      updateLayout();
+      reRenderVisiblePages();
+    }, 50);
+  });
+
+  // Mobile tab switcher
+  mobileTabBtns.forEach(btn => {
+    btn.addEventListener("click", () => {
+      const pane = btn.getAttribute("data-pane");
+      mobileTabBtns.forEach(b => b.classList.remove("active"));
+      btn.classList.add("active");
+      root.setAttribute("data-active-tab", pane);
+
+      // Sync scroll when switching tab
+      if (pane === "right") {
+        rightPane.scrollTop = leftPane.scrollTop;
+      } else {
+        leftPane.scrollTop = rightPane.scrollTop;
+      }
+
+      setTimeout(() => {
+        updateLayout();
+        reRenderVisiblePages();
+        updatePageTracker();
+      }, 50);
+    });
+  });
+
+  // Window resize handler
+  let resizeTimer = null;
+  window.addEventListener("resize", () => {
+    clearTimeout(resizeTimer);
+    resizeTimer = setTimeout(() => {
+      if (isFitWidth) {
+        updateLayout();
+        reRenderVisiblePages();
+      }
+    }, 150);
+  });
+
+  // Handle initialization and <details> toggle
+  function init() {
+    if (initialized) return;
+    initialized = true;
+    ensurePdfJs(loadDocuments);
+  }
+
+  const detailsParent = root.closest("details");
+  if (detailsParent) {
+    if (detailsParent.open) {
+      init();
+    } else {
+      detailsParent.addEventListener("toggle", function onToggle() {
+        if (detailsParent.open) {
+          init();
+          setTimeout(() => {
+            updateLayout();
+            reRenderVisiblePages();
+          }, 80);
+        }
+      });
+    }
+  } else {
+    init();
+  }
+})();
+</script>
