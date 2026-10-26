@@ -32,3 +32,4 @@ _site
 
 # PDFs directly in _coll_lessonscripts (not its subfolders)
 /_coll_lessonscripts/*.pdf
+/_coll_lessonscripts/*.url
