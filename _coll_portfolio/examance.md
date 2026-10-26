@@ -10,12 +10,26 @@ header:
 
 Teachers create exams in LaTeX, print booklets with pseudonym QR codes, and grade student submissions anonymously. All personal data, scans, and grades are encrypted directly in the browser (AES-256-GCM) — the server only ever sees ciphertext.
 
-<p>
-  <a href="https://examance.valentin-herrmann.com" class="btn btn--primary" target="_blank" rel="noopener"><i class="fas fa-rocket"></i> Try Beta</a>
-  <a href="https://github.com/ValentinHerrmann/Examance" class="btn btn--inverse" target="_blank" rel="noopener"><i class="fab fa-github"></i> GitHub</a>
-  <a href="https://github.com/ValentinHerrmann/Examance/blob/main/docs/pitches/examance-ui.pdf" class="btn btn--info" target="_blank" rel="noopener"><i class="fas fa-file-pdf"></i> Pitch Deck (German)</a>
-</p>
-<small style="opacity:0.8;">*Beta account access available upon request (invite only).*</small>
+<div style="display: flex; flex-wrap: wrap; gap: 1rem 2rem; align-items: center; margin: 1.25rem 0 1.25rem 0; font-size: 0.95rem; line-height: 1.5;">
+  <span><i class="fas fa-external-link-alt" style="opacity:0.7; margin-right:0.35rem;"></i><strong>Beta:</strong> <a href="https://examance.valentin-herrmann.com" target="_blank" rel="noopener">examance.valentin-herrmann.com</a></span>
+  <span><i class="fab fa-github" style="opacity:0.7; margin-right:0.35rem;"></i><strong>Source:</strong> <a href="https://github.com/ValentinHerrmann/Examance" target="_blank" rel="noopener">ValentinHerrmann/Examance</a> <small style="opacity:0.7;">(MIT)</small></span>
+  <span><i class="fas fa-file-pdf" style="opacity:0.7; margin-right:0.35rem;"></i><strong>Pitch Slides (DE):</strong> <a href="/examance/slides-ui.pdf">UI Tour</a> &middot; <a href="/examance/slides-info.pdf">Tech &amp; Privacy</a></span>
+</div>
+
+<div class="notice" style="display: flex; align-items: center; justify-content: space-between; gap: 1.5rem; flex-wrap: wrap; margin: 1.5rem 0 2rem 0 !important; padding: 1.1rem; border-radius: 10px;">
+  <div style="flex: 1 1 300px; min-width: 240px;">
+    <h4 style="margin: 0 0 0.4rem 0;"><i class="fas fa-user-plus"></i> Requesting Beta Access</h4>
+    <p style="margin: 0 0 0.5rem 0; font-size: 0.9rem; line-height: 1.5;">
+      The beta instance is live at <a href="https://examance.valentin-herrmann.com" target="_blank" rel="noopener">examance.valentin-herrmann.com</a>.
+    </p>
+    <p style="margin: 0; font-size: 0.9rem; line-height: 1.5;">
+      <strong>People who know me personally</strong> can request an account directly on the login page via the <em>"Request an account"</em> button.
+    </p>
+  </div>
+  <div style="flex: 0 0 280px; max-width: 100%;">
+    <a href="/examance/requestaccount.png"><img src="/examance/requestaccount.png" alt="Request an account on Examance sign-in page" style="border-radius: 8px; border: 1px solid rgba(255,255,255,0.15); box-shadow: 0 4px 12px rgba(0,0,0,0.3); display: block;"></a>
+  </div>
+</div>
 
 ---
 
@@ -152,11 +166,11 @@ Built specifically around German public school compliance (DSGVO / GDPR).
 <figure class="half">
   <a href="/examance/poster-ui-1.jpg"><img src="/examance/poster-ui-1.jpg" alt="Poster Screenshot Tour Page 1" style="border-radius:10px;"></a>
   <a href="/examance/poster-ui-2.jpg"><img src="/examance/poster-ui-2.jpg" alt="Poster Screenshot Tour Page 2" style="border-radius:10px;"></a>
-  <figcaption><b>Screenshot tour:</b> Overview of creating exams, paper/screen grading, and results. <a href="https://github.com/ValentinHerrmann/Examance/blob/main/docs/posters/examance-ui.pdf" class="btn btn--info btn--small" target="_blank" rel="noopener"><i class="fas fa-download"></i> PDF (A3)</a></figcaption>
+  <figcaption><b>Screenshot tour:</b> Overview of creating exams, paper/screen grading, and results. &middot; <a href="/examance/poster-ui.pdf"><i class="fas fa-file-pdf"></i> Download PDF (A3)</a></figcaption>
 </figure>
 
 <figure class="half">
   <a href="/examance/poster-info-1.jpg"><img src="/examance/poster-info-1.jpg" alt="Poster Architecture &amp; Privacy Page 1" style="border-radius:10px;"></a>
   <a href="/examance/poster-info-2.jpg"><img src="/examance/poster-info-2.jpg" alt="Poster Architecture &amp; Privacy Page 2" style="border-radius:10px;"></a>
-  <figcaption><b>Architecture &amp; Privacy:</b> Technical breakdown of cryptography and school deployment. <a href="https://github.com/ValentinHerrmann/Examance/blob/main/docs/posters/examance-info.pdf" class="btn btn--info btn--small" target="_blank" rel="noopener"><i class="fas fa-download"></i> PDF (A3)</a></figcaption>
+  <figcaption><b>Architecture &amp; Privacy:</b> Technical breakdown of cryptography and school deployment. &middot; <a href="/examance/poster-info.pdf"><i class="fas fa-file-pdf"></i> Download PDF (A3)</a></figcaption>
 </figure>
