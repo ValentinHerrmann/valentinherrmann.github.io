@@ -12,9 +12,9 @@ Teachers create exams in LaTeX, print booklets with pseudonym QR codes, and grad
 
 <div style="display: flex; flex-wrap: wrap; gap: 1rem 2rem; align-items: center; margin: 1.25rem 0 1.25rem 0; font-size: 0.95rem; line-height: 1.5;">
   <span><i class="fas fa-external-link-alt" style="opacity:0.7; margin-right:0.35rem;"></i><strong>Beta:</strong> <a href="https://examance.de" target="_blank" rel="noopener">examance.de</a></span>
-  <span><i class="fas fa-file-pdf" style="opacity:0.7; margin-right:0.35rem;"></i><strong>Documentation (User+Operator+Developer) (DE, EN):</strong> <a href="https://docs.examance.de/">UI Tour</a></span>
+  <span><i class="fas fa-file-pdf" style="opacity:0.7; margin-right:0.35rem;"></i><strong>Documentation (User+Operator+Developer) (DE, EN):</strong> <a href="https://docs.examance.de/">Docs</a></span>
   <span><i class="fab fa-github" style="opacity:0.7; margin-right:0.35rem;"></i><strong>Source:</strong> <a href="https://github.com/ValentinHerrmann/Examance" target="_blank" rel="noopener">ValentinHerrmann/Examance</a> <small style="opacity:0.7;">(MIT)</small></span>
-  <span><i class="fas fa-file-pdf" style="opacity:0.7; margin-right:0.35rem;"></i><strong>Pitch Slides (DE):</strong> <a href="https://docs.examance.de/pitches/slides-ui.pdf">UI Tour</a> &middot; <a href="https://docs.examance.de/pitches/slides-info.pdf">Tech &amp; Privacy</a></span>
+  <span><i class="fas fa-file-pdf" style="opacity:0.7; margin-right:0.35rem;"></i><strong>Pitch Slides (DE):</strong> <a href="https://docs.examance.de/pitches/examance-ui.pdf">UI Tour</a> &middot; <a href="https://docs.examance.de/pitches/examance-info.pdf">Tech &amp; Privacy</a></span>
 </div>
 
 <div class="notice" style="display: flex; align-items: center; justify-content: space-between; gap: 1.5rem; flex-wrap: wrap; margin: 1.5rem 0 2rem 0 !important; padding: 1.1rem; border-radius: 10px;">
@@ -165,13 +165,11 @@ Built specifically around German public school compliance (DSGVO / GDPR).
 ## Information Posters (German A3)
 
 <figure class="half">
-  <a href="/examance/poster-ui-1.jpg"><img src="/examance/poster-ui-1.jpg" alt="Poster Screenshot Tour Page 1" style="border-radius:10px;"></a>
-  <a href="/examance/poster-ui-2.jpg"><img src="/examance/poster-ui-2.jpg" alt="Poster Screenshot Tour Page 2" style="border-radius:10px;"></a>
-  <figcaption><b>Screenshot tour:</b> Overview of creating exams, paper/screen grading, and results. &middot; <a href="https://docs.examance.de/pitches/poster-ui.pdf"><i class="fas fa-file-pdf"></i> Download PDF (A3)</a></figcaption>
+  {% include pdf-preview.html pdf="https://docs.examance.de/posters/examance-ui.pdf" pages="1,2" alt="Poster Screenshot Tour" %}
+  <figcaption><b>Screenshot tour:</b> Overview of creating exams, paper/screen grading, and results. &middot; <a href="https://docs.examance.de/posters/examance-ui.pdf"><i class="fas fa-file-pdf"></i> Download PDF (A3)</a></figcaption>
 </figure>
 
 <figure class="half">
-  <a href="/examance/poster-info-1.jpg"><img src="/examance/poster-info-1.jpg" alt="Poster Architecture &amp; Privacy Page 1" style="border-radius:10px;"></a>
-  <a href="/examance/poster-info-2.jpg"><img src="/examance/poster-info-2.jpg" alt="Poster Architecture &amp; Privacy Page 2" style="border-radius:10px;"></a>
-  <figcaption><b>Architecture &amp; Privacy:</b> Technical breakdown of cryptography and school deployment. &middot; <a href="https://docs.examance.de/pitches/poster-info.pdf"><i class="fas fa-file-pdf"></i> Download PDF (A3)</a></figcaption>
+  {% include pdf-preview.html pdf="https://docs.examance.de/posters/examance-info.pdf" pages="1,2" alt="Poster Architecture &amp; Privacy" %}
+  <figcaption><b>Architecture &amp; Privacy:</b> Technical breakdown of cryptography and school deployment. &middot; <a href="https://docs.examance.de/posters/examance-info.pdf"><i class="fas fa-file-pdf"></i> Download PDF (A3)</a></figcaption>
 </figure>

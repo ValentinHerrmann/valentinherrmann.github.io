@@ -1,0 +1,131 @@
+<!-- PDF Preview Include: renders pages of a (remote) PDF client-side, so previews always match the current file -->
+{% assign pdf_preview_pages = include.pages | default: "1" | split: "," %}
+{% for pdf_preview_page in pdf_preview_pages %}
+{% assign pdf_preview_num = pdf_preview_page | strip %}
+<a class="pdf-preview" href="{{ include.pdf }}" data-pdf="{{ include.pdf }}" data-page="{{ pdf_preview_num }}" target="_blank" rel="noopener">
+  <canvas role="img" aria-label="{{ include.alt | default: 'PDF' }}, page {{ pdf_preview_num }}"></canvas>
+  <span class="pdf-preview-status">{{ include.alt | default: "PDF" }}, page {{ pdf_preview_num }} (open PDF)</span>
+</a>
+{% endfor %}
+
+{% unless pdf_preview_assets_loaded %}
+{% assign pdf_preview_assets_loaded = true %}
+<style>
+  .pdf-preview {
+    position: relative;
+    display: inline-block;
+    aspect-ratio: 1 / 1.4142;
+    border-radius: 10px;
+    overflow: hidden;
+    background: rgba(127, 127, 127, 0.12);
+    vertical-align: top;
+  }
+  .pdf-preview canvas {
+    display: none;
+    width: 100%;
+    height: auto;
+  }
+  .pdf-preview-status {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+    text-align: center;
+    font-size: 0.85rem;
+  }
+  .pdf-preview.is-rendered {
+    aspect-ratio: auto;
+    background: none;
+  }
+  .pdf-preview.is-rendered canvas {
+    display: block;
+  }
+  .pdf-preview.is-rendered .pdf-preview-status {
+    display: none;
+  }
+</style>
+
+<script>
+(function () {
+  if (window.pdfPreviewInit)
+    return;
+  window.pdfPreviewInit = true;
+
+  const PDFJS_SRC    = "https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js";
+  const PDFJS_WORKER = "https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.worker.min.js";
+  const documents    = new Map();
+  let pdfjsPromise   = null;
+
+  /*  load PDF.js once, reusing a script tag another include may have inserted  */
+  function loadPdfJs () {
+    if (!pdfjsPromise)
+      pdfjsPromise = new Promise((resolve, reject) => {
+        if (window.pdfjsLib)
+          return resolve(window.pdfjsLib);
+        let script = document.querySelector(`script[src="${PDFJS_SRC}"]`);
+        if (!script) {
+          script = document.createElement("script");
+          script.src = PDFJS_SRC;
+          document.head.appendChild(script);
+        }
+        script.addEventListener("load", () => resolve(window.pdfjsLib));
+        script.addEventListener("error", () => reject(new Error("PDF.js failed to load")));
+      }).then((lib) => {
+        lib.GlobalWorkerOptions.workerSrc = PDFJS_WORKER;
+        return lib;
+      });
+    return pdfjsPromise;
+  }
+
+  /*  fetch each PDF only once, even when several pages of it are previewed  */
+  function loadDocument (url) {
+    if (!documents.has(url))
+      documents.set(url, loadPdfJs().then((lib) => lib.getDocument(url).promise));
+    return documents.get(url);
+  }
+
+  async function render (link) {
+    try {
+      const doc      = await loadDocument(link.dataset.pdf);
+      const page     = await doc.getPage(parseInt(link.dataset.page, 10));
+      const canvas   = link.querySelector("canvas");
+      const ratio    = Math.min(window.devicePixelRatio || 1, 2);
+      const scale    = (link.clientWidth * ratio) / page.getViewport({ scale: 1 }).width;
+      const viewport = page.getViewport({ scale });
+      canvas.width   = Math.floor(viewport.width);
+      canvas.height  = Math.floor(viewport.height);
+      await page.render({ canvasContext: canvas.getContext("2d"), viewport }).promise;
+      link.classList.add("is-rendered");
+    }
+    catch (err) {
+      console.error("PDF preview failed:", link.dataset.pdf, err);
+      link.querySelector(".pdf-preview-status").textContent = "Preview unavailable, open PDF";
+    }
+  }
+
+  function init () {
+    const links = document.querySelectorAll(".pdf-preview");
+    if (!("IntersectionObserver" in window)) {
+      links.forEach(render);
+      return;
+    }
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          observer.unobserve(entry.target);
+          render(entry.target);
+        }
+      });
+    }, { rootMargin: "400px 0px" });
+    links.forEach((link) => observer.observe(link));
+  }
+
+  if (document.readyState === "loading")
+    document.addEventListener("DOMContentLoaded", init);
+  else
+    init();
+})();
+</script>
+{% endunless %}
