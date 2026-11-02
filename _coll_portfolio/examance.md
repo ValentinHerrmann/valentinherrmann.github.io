@@ -12,8 +12,8 @@ Teachers create exams in LaTeX, print booklets with pseudonym QR codes, and grad
 
 <div style="display: flex; flex-wrap: wrap; gap: 1rem 2rem; align-items: center; margin: 1.25rem 0 1.25rem 0; font-size: 0.95rem; line-height: 1.5;">
   <span><i class="fas fa-external-link-alt" style="opacity:0.7; margin-right:0.35rem;"></i><strong>Beta:</strong> <a href="https://examance.de" target="_blank" rel="noopener">examance.de</a></span>
-  <span><i class="fab fa-github" style="opacity:0.7; margin-right:0.35rem;"></i><strong>Source:</strong> <a href="https://github.com/ValentinHerrmann/Examance" target="_blank" rel="noopener">ValentinHerrmann/Examance</a> <small style="opacity:0.7;">(MIT)</small></span>
   <span><i class="fas fa-file-pdf" style="opacity:0.7; margin-right:0.35rem;"></i><strong>Documentation (User+Operator+Developer) (DE, EN):</strong> <a href="https://docs.examance.de/">UI Tour</a></span>
+  <span><i class="fab fa-github" style="opacity:0.7; margin-right:0.35rem;"></i><strong>Source:</strong> <a href="https://github.com/ValentinHerrmann/Examance" target="_blank" rel="noopener">ValentinHerrmann/Examance</a> <small style="opacity:0.7;">(MIT)</small></span>
   <span><i class="fas fa-file-pdf" style="opacity:0.7; margin-right:0.35rem;"></i><strong>Pitch Slides (DE):</strong> <a href="https://docs.examance.de/pitches/slides-ui.pdf">UI Tour</a> &middot; <a href="https://docs.examance.de/pitches/slides-info.pdf">Tech &amp; Privacy</a></span>
 </div>
 
